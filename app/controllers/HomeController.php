@@ -5,7 +5,7 @@ class HomeController extends \BaseController {
 
 	public function home()
 	{
-		return View::make('angular.container');
+		return View::make('angular.angular');
 	}
 
 }
