@@ -4,19 +4,22 @@ namespace Codeception\Module;
 class AcceptanceHelper extends \Codeception\Module
 {
 
-	public function logIn()
+	public function logIn($credentials = [])
 	{
+		$local_credentials = array_merge([
+			'email' => 'vedovelli@gmail.com', 
+			'password' => '123456'], $credentials);
+
 		$I = $this->getModule('Laravel4');
 
 		$I->amOnRoute('login_path');
 
-		$I->fillField('email', 'vedovelli@gmail.com');
+		$I->fillField('email', $local_credentials['email']);
 
-		$I->fillField('password', '123456');
+		$I->fillField('password', $local_credentials['password']);
 
 		$I->click('Log In');
 
-		$I->see('Waiting for the Javascript magic to happen!', 'h1');
 	}
 
 }

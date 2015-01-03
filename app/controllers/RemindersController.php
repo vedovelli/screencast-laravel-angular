@@ -27,10 +27,10 @@ class RemindersController extends Controller {
 		switch ($response)
 		{
 			case Password::INVALID_USER:
-				return Redirect::back()->with('error', Lang::get($response));
+				return Redirect::back()->with('error', 'E-mail não encontrado')->withInput();
 
 			case Password::REMINDER_SENT:
-				return Redirect::back()->with('status', Lang::get($response));
+				return Redirect::back()->with('status', 'Link enviado com sucesso para o e-mail informado');
 		}
 	}
 
@@ -70,10 +70,10 @@ class RemindersController extends Controller {
 			case Password::INVALID_PASSWORD:
 			case Password::INVALID_TOKEN:
 			case Password::INVALID_USER:
-				return Redirect::back()->with('error', Lang::get($response));
+				return Redirect::back()->with('error', 'Não foi possível alterar a senha. Confira e-mail informado')->withInput();
 
 			case Password::PASSWORD_RESET:
-				return Redirect::to('login')->with('status', Lang::get($response));
+				return Redirect::to('login')->with('status', 'Senha alterada com sucesso');
 		}
 	}
 

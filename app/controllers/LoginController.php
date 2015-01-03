@@ -9,6 +9,9 @@ class LoginController extends \BaseController {
 		if (Auth::attempt(array('email' => $email, 'password' => $password), $remember_me))
 		{
 			return Redirect::home();
+		} else {
+
+			return Redirect::back()->withInput()->with('error', 'E-mail ou senha inválidos');
 		}
 	}
 

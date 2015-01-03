@@ -16,4 +16,4 @@ $I->fillField('email', 'vedovelli@gmail.com');
 
 $I->click('Enviar link troca de senha');
 
-$I->see('Password reminder sent!');
+$I->see('Link enviado com sucesso para o e-mail informado');
