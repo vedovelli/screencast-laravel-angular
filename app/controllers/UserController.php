@@ -13,17 +13,7 @@ class UserController extends \BaseController {
 	{
 		$user_list = $this->userModel->list_users(10);
 
-		$response = [];
-
-		$response['success'] = true;
-
-		$response['description'] = 'Paginated list of all users';
-
-		$response['meta'] = ['total' => count($user_list)];
-
-		$response['users'] = $user_list;
-
-		return Response::json($response, 200);
+		return Response::json($user_list, 200);
 	}
 
 	public function store()

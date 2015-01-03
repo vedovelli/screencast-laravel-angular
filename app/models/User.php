@@ -21,7 +21,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	public function list_users($limit = 10)
 	{
 
-		return $this->take($limit)->get();
+		return $this->paginate($limit);
 	}
 
 	public function get_user($id)
