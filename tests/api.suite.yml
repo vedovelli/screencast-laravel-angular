@@ -1,0 +1,8 @@
+class_name: ApiTester
+modules:
+    enabled: [ApiHelper, REST, Laravel4, PhpBrowser]
+    config:
+        REST:
+            url: http://spa.app/api/
+        PhpBrowser:
+            url: http://spa.app/
