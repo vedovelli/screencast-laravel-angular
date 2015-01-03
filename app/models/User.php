@@ -20,27 +20,21 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	public function list_users($limit = 10)
 	{
-
 		return $this->paginate($limit);
 	}
 
 	public function get_user($id)
 	{
-
 		return $this->find($id);
 	}
 
 	public function save_user($input)
 	{
-
-		$user = $this->create($input);
-
-		return $user;
+		return $this->create($input);
 	}
 
 	public function update_user($id, $input)
 	{
-
 		$user = $this->find($id);
 
 		$user->fill($input);
@@ -52,7 +46,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	public function delete_user($id)
 	{
-
 		$user = $this->find($id);
 
 		$user->delete();
