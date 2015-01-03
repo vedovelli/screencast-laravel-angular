@@ -1,7 +1,7 @@
 <?php 
 $I = new AcceptanceTester($scenario);
 
-$I->am('a user');
+$I->am('user');
 
 $I->wantTo('log in');
 

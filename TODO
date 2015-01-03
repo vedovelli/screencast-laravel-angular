@@ -1,3 +1,4 @@
 * Criar uma action no LoginController para exibir o form de Login
 
-* Escrever acceptance tests para login
+* Escrever acceptance tests para password reset
+

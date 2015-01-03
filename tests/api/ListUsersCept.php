@@ -4,12 +4,7 @@ $I = new ApiTester($scenario);
 
 $I->am('consumer app');
 
-$I->wantTo('create 20 users and retrieve a list of 10 users');
-
-for ($i=0; $i < 20; $i++) { 
-	
-	$I->createAUser();
-}
+$I->wantTo('Retrive a list containing 10 users');
 
 $I->sendGET('user');
 

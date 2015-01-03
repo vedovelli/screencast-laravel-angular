@@ -6,9 +6,17 @@ $I->am('consumer app');
 
 $I->wantTo('create a new user');
 
-$I->createAUser();
+$userData = [
+	'fullname' => 'Fabio Vedovelli',
+	'username' => 'vedovelli',
+	'email' => 'vedovelli@gmail.com',
+	'password' => '123456',
+	'city' => 'Santo André',
+	'state' => 'SP'];
 
- $I->seeResponseContainsJson([
+$I->sendPOST('user', $userData);
+
+$I->seeResponseContainsJson([
 	'success'=> true, 
 	'description'=> 'Recently saved user', 
 	'user' => [
@@ -19,7 +27,3 @@ $I->createAUser();
 		'state' => 'SP',
 	]
 ]);
-
-$I->seeResponseIsJson();
-
-$I->seeResponseContainsJson(['success'=> true]);

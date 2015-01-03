@@ -7,6 +7,8 @@
 		<div class="col-md-6">
 
 			<div class="well spa-login-box">
+
+				<h3>Password Reset</h3>
 				
 				@include('layouts.partials.flash_messages')
 
