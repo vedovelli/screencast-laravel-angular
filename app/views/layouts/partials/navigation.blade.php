@@ -5,7 +5,7 @@
 		</div>
 		@if( $currentUser )
 		<ul class="nav navbar-nav navbar-right">
-			<li>{{ link_to_route('logout', 'Logout')}}</li>
+			<li>{{ link_to_route('logout', 'Logout', null, ['id' => 'logout_link'])}}</li>
 		</ul>
 		@endif
 	</div>

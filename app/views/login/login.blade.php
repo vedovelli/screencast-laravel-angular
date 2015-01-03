@@ -3,6 +3,7 @@
 @section('content')
 
 	<div class="row">
+
 		<div class="col-md-offset3 col-md-3"></div>
 		<div class="col-md-6">
 
@@ -10,7 +11,7 @@
 
 				@include('layouts.partials.flash_messages')
 
-				{{ Form::open(['action' => 'login_path']) }}
+				{{ Form::open(['action' => 'login_path', 'id' => 'loginForm']) }}
 					
 					<div class="form-group">
 						{{ Form::label('txtEmail', 'E-mail') }}
