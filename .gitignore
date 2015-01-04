@@ -11,8 +11,5 @@ tests/_output/*
 tests/_output/*
 
 .idea
-bower_components
+public/bower_components
 config.codekit
-public/bootstrap
-public/select2-bootstrap3-css/
-public/select2/

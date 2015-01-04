@@ -21,8 +21,8 @@
     <link href="/sbadmin/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- Select2 -->
-    <link href="/select2/select2.css" rel="stylesheet">
-    <link href="/select2-bootstrap3-css/select2-bootstrap.css" rel="stylesheet">
+    <link href="/bower_components/select2/select2.css" rel="stylesheet">
+    <link href="/bower_components/select2-bootstrap3-css/select2-bootstrap.css" rel="stylesheet">
 
     <!-- Local CSS -->
     <link href="/css/spa.css" rel="stylesheet">
