@@ -2,11 +2,13 @@
 	
 	$(document).ready(function() { // Se inicia o uso da jQuery apenas após o DOM ter sido totalmente carregado
 	
-		var $email_input = $('#txtEmail');
+		var 	$txtEmail = $('#txtEmail'),
+				$selectCity = $('#selectCity')
+		;
 
-		if($email_input.length > 0)
+		if($txtEmail.length > 0)
 		{
-			$email_input.focus();
+			$txtEmail.focus();
 		}
 		
 	});
