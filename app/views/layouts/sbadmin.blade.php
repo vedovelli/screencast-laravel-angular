@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Single Page Application - por Vedovelli</title>
+    <title>SPAs, por Vedovelli</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/sbadmin/css/bootstrap.min.css" rel="stylesheet">

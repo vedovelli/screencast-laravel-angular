@@ -7,7 +7,7 @@ $I->wantTo('log out');
 
 $I->logIn();
 
-$I->see('Waiting for the Javascript magic to happen!', 'h1');
+$I->see('Usuários', 'h1');
 
 $I->amOnRoute('home');
 
