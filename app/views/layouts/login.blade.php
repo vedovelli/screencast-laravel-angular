@@ -11,7 +11,13 @@
 </head>
 <body>
 
-	@include('layouts.partials.navigation')
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				{{link_to_route('home', 'Single Page Applications', null, ['class' => 'navbar-brand'])}}
+			</div>
+		</div>
+	</nav>
 
 	<div class="container">
 	@yield('content')
