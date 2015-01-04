@@ -13,12 +13,12 @@
 
 		$spaUserList.on('mouseenter', '.spa-user-item', function(event) {
 		
-			$(event.currentTarget).find('.spa-acoes').show();
+			$(event.currentTarget).find('.spa-user-actions').show();
 		});
 
 		$spaUserList.on('mouseleave', '.spa-user-item', function(event) {
 		
-			$(event.currentTarget).find('.spa-acoes').hide();
+			$(event.currentTarget).find('.spa-user-actions').hide();
 		});
 
 		$spaUserList.on('click', '.spa-remove-user', function(event) {

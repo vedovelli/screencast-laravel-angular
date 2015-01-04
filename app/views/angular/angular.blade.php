@@ -35,7 +35,9 @@
 		</div>
 		<div class="col-md-2">
 			<div class="form-group spa-container-btn-novo">
-				<button class="btn btn-primary">Criar novo usuário</button>
+				<button class="btn btn-primary">
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+					Criar novo usuário</button>
 			</div>
 		</div>
 	</div>
@@ -55,17 +57,14 @@
 						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
 						<strong>Cidade:</strong> Santo André<br>
 						<strong>Estado:	</strong> SP<br><br>
-						<p class="text-center"><small>Atualizado em 29/12/2014 as 22:45</small></p>
-						<div class="btn-group spa-acoes">
-							<button type="button" class="btn btn-default btn-sm">Ações</button>
-							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
-								<span class="caret"></span>
-								<span class="sr-only">Toggle Dropdown</span>
+						<p class="text-center"><small><em>Atualizado em 29/12/2014 as 22:45</em></small></p>
+						<div class="spa-user-actions">
+							<button type="button" data-fullname="Joaquim" class="btn btn-success btn-xs spa-edit-user">
+								<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar
 							</button>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="#" class="spa-edit-user" data-fullname="Ved">Editar</a></li>
-								<li><a href="#" class="spa-remove-user">Remover</a></li>
-							</ul>
+							<button type="button" class="btn btn-danger btn-xs spa-remove-user">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir
+							</button>
 						</div>
 					</div> <!--.panel-body-->
 				</div> <!--.panel panel-info spa-user-item-->
@@ -80,17 +79,14 @@
 						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
 						<strong>Cidade:</strong> Santo André<br>
 						<strong>Estado:	</strong> SP<br><br>
-						<p class="text-center"><small>Atualizado em 29/12/2014 as 22:45</small></p>
-						<div class="btn-group spa-acoes">
-							<button type="button" class="btn btn-default btn-sm">Ações</button>
-							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
-								<span class="caret"></span>
-								<span class="sr-only">Toggle Dropdown</span>
+						<p class="text-center"><small><em>Atualizado em 29/12/2014 as 22:45</em></small></p>
+						<div class="spa-user-actions">
+							<button type="button" data-fullname="Joaquim" class="btn btn-success btn-xs spa-edit-user">
+								<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar
 							</button>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="#" class="spa-edit-user" data-fullname="Joaquim">Editar</a></li>
-								<li><a href="#" class="spa-remove-user">Remover</a></li>
-							</ul>
+							<button type="button" class="btn btn-danger btn-xs spa-remove-user">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir
+							</button>
 						</div>
 					</div> <!--.panel-body-->
 				</div> <!--.panel panel-info spa-user-item-->
@@ -105,17 +101,14 @@
 						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
 						<strong>Cidade:</strong> Santo André<br>
 						<strong>Estado:	</strong> SP<br><br>
-						<p class="text-center"><small>Atualizado em 29/12/2014 as 22:45</small></p>
-						<div class="btn-group spa-acoes">
-							<button type="button" class="btn btn-default btn-sm">Ações</button>
-							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
-								<span class="caret"></span>
-								<span class="sr-only">Toggle Dropdown</span>
+						<p class="text-center"><small><em>Atualizado em 29/12/2014 as 22:45</em></small></p>
+						<div class="spa-user-actions">
+							<button type="button" data-fullname="Joaquim" class="btn btn-success btn-xs spa-edit-user">
+								<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar
 							</button>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="#" class="spa-edit-user" data-fullname="Joao">Editar</a></li>
-								<li><a href="#" class="spa-remove-user">Remover</a></li>
-							</ul>
+							<button type="button" class="btn btn-danger btn-xs spa-remove-user">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir
+							</button>
 						</div>
 					</div> <!--.panel-body-->
 				</div> <!--.panel panel-info spa-user-item-->
@@ -132,17 +125,14 @@
 						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
 						<strong>Cidade:</strong> Santo André<br>
 						<strong>Estado:	</strong> SP<br><br>
-						<p class="text-center"><small>Atualizado em 29/12/2014 as 22:45</small></p>
-						<div class="btn-group spa-acoes">
-							<button type="button" class="btn btn-default btn-sm">Ações</button>
-							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
-								<span class="caret"></span>
-								<span class="sr-only">Toggle Dropdown</span>
+						<p class="text-center"><small><em>Atualizado em 29/12/2014 as 22:45</em></small></p>
+						<div class="spa-user-actions">
+							<button type="button" data-fullname="Joaquim" class="btn btn-success btn-xs spa-edit-user">
+								<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar
 							</button>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="#" class="spa-edit-user" data-fullname="Jão">Editar</a></li>
-								<li><a href="#" class="spa-remove-user">Remover</a></li>
-							</ul>
+							<button type="button" class="btn btn-danger btn-xs spa-remove-user">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir
+							</button>
 						</div>
 					</div> <!--.panel-body-->
 				</div> <!--.panel panel-info spa-user-item-->
@@ -157,17 +147,14 @@
 						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
 						<strong>Cidade:</strong> Santo André<br>
 						<strong>Estado:	</strong> SP<br><br>
-						<p class="text-center"><small>Atualizado em 29/12/2014 as 22:45</small></p>
-						<div class="btn-group spa-acoes">
-							<button type="button" class="btn btn-default btn-sm">Ações</button>
-							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
-								<span class="caret"></span>
-								<span class="sr-only">Toggle Dropdown</span>
+						<p class="text-center"><small><em>Atualizado em 29/12/2014 as 22:45</em></small></p>
+						<div class="spa-user-actions">
+							<button type="button" data-fullname="Joaquim" class="btn btn-success btn-xs spa-edit-user">
+								<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar
 							</button>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="#" class="spa-edit-user" data-fullname="Truta">Editar</a></li>
-								<li><a href="#" class="spa-remove-user">Remover</a></li>
-							</ul>
+							<button type="button" class="btn btn-danger btn-xs spa-remove-user">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir
+							</button>
 						</div>
 					</div> <!--.panel-body-->
 				</div> <!--.panel panel-info spa-user-item-->
@@ -182,17 +169,14 @@
 						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
 						<strong>Cidade:</strong> Santo André<br>
 						<strong>Estado:	</strong> SP<br><br>
-						<p class="text-center"><small>Atualizado em 29/12/2014 as 22:45</small></p>
-						<div class="btn-group spa-acoes">
-							<button type="button" class="btn btn-default btn-sm">Ações</button>
-							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
-								<span class="caret"></span>
-								<span class="sr-only">Toggle Dropdown</span>
+						<p class="text-center"><small><em>Atualizado em 29/12/2014 as 22:45</em></small></p>
+						<div class="spa-user-actions">
+							<button type="button" data-fullname="Joaquim" class="btn btn-success btn-xs spa-edit-user">
+								<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar
 							</button>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="#" class="spa-edit-user" data-fullname="Ved">Editar</a></li>
-								<li><a href="#" class="spa-remove-user">Remover</a></li>
-							</ul>
+							<button type="button" class="btn btn-danger btn-xs spa-remove-user">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir
+							</button>
 						</div>
 					</div> <!--.panel-body-->
 				</div> <!--.panel panel-info spa-user-item-->
