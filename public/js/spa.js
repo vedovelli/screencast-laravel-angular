@@ -2,9 +2,7 @@
 	
 	$(document).ready(function() { // Se inicia o uso da jQuery apenas após o DOM ter sido totalmente carregado
 	
-		var 
-			$email_input = $('#txtEmail')
-		;
+		var $email_input = $('#txtEmail');
 
 		if($email_input.length > 0)
 		{

@@ -21,7 +21,7 @@ Route::get('login', [
 
 
 Route::get('logout', [
-	'as' => 'logout',
+	'as' => 'logout_path',
 	'uses' => 'LoginController@logout'
 ]);
 

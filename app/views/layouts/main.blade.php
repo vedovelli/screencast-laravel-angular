@@ -17,10 +17,7 @@
 	@yield('content')
 	</div>
 
-	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/bower_components/angular/angular.min.js"></script>
-    <script src="/js/spa.js"></script>
+	<script src="/js/min/spa-min.js"></script>
 
 </body>
 </html>
