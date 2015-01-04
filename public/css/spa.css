@@ -21,3 +21,31 @@ body{
 .spa-acoes{
 	display: none;
 }
+
+/* Animacao adicional ao modal Bootstrap */
+.modal {
+    /*! adjust transition time */
+    -webkit-transition: all ease-out !important;
+    -moz-transition: all 0.3s ease-out !important;
+    -o-transition: all 0.3s ease-out !important;
+    transition: all 0.3s ease-out !important;
+}
+.modal.in .modal-dialog {
+    /*! editthis transform to any transform you want */
+    -webkit-transform: scale(1.1, 1.1) !important;
+    -ms-transform: scale(1.1, 1.1) !important;
+    transform: scale(1.1, 1.1) !important;
+}
+.modal.fade .modal-dialog {
+    /*! disable sliding from left/right/top/bottom */
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+/* Resize and reposition top*/
+
+.modal-dialog{
+	width: 760px;
+	margin: 160px auto;
+}
