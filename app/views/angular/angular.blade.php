@@ -4,27 +4,6 @@
 	<!-- @include('angular.strictly_angular') -->
 	
 
-<!--Modal-->
-	<div class="modal fade" id="userModal">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title">Modal title</h4>
-				</div>
-				<div class="modal-body">
-					<p>One fine body&hellip;</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
-				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
-<!--/Modal-->
-
-
 <!--Filters-->
 	<h3>Filtros</h3>
 	<div class="row">
@@ -56,7 +35,7 @@
 		</div>
 		<div class="col-md-2">
 			<div class="form-group spa-container-btn-novo">
-				<button class="btn btn-primary" data-toggle="modal" data-target="#userModal">Criar novo usuário</button>
+				<button class="btn btn-primary">Criar novo usuário</button>
 			</div>
 		</div>
 	</div>
@@ -72,10 +51,11 @@
 						<h3 class="panel-title">Fábio Vedovelli
 							<small class="pull-right">vedovelli@gmail.com</small></h3>
 					</div>
-					<div class="panel-body">
+					<div class="panel-body spa-user-card-body">
 						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
 						<strong>Cidade:</strong> Santo André<br>
 						<strong>Estado:	</strong> SP<br><br>
+						<p class="text-center"><small>Atualizado em 29/12/2014 as 22:45</small></p>
 						<div class="btn-group spa-acoes">
 							<button type="button" class="btn btn-default btn-sm">Ações</button>
 							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
@@ -83,8 +63,8 @@
 								<span class="sr-only">Toggle Dropdown</span>
 							</button>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Editar</a></li>
-								<li><a href="#">Remover</a></li>
+								<li><a href="#" class="spa-edit-user" data-fullname="Ved">Editar</a></li>
+								<li><a href="#" class="spa-remove-user">Remover</a></li>
 							</ul>
 						</div>
 					</div> <!--.panel-body-->
@@ -96,10 +76,11 @@
 						<h3 class="panel-title">Fábio Vedovelli
 							<small class="pull-right">vedovelli@gmail.com</small></h3>
 					</div>
-					<div class="panel-body">
+					<div class="panel-body spa-user-card-body">
 						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
 						<strong>Cidade:</strong> Santo André<br>
 						<strong>Estado:	</strong> SP<br><br>
+						<p class="text-center"><small>Atualizado em 29/12/2014 as 22:45</small></p>
 						<div class="btn-group spa-acoes">
 							<button type="button" class="btn btn-default btn-sm">Ações</button>
 							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
@@ -107,8 +88,8 @@
 								<span class="sr-only">Toggle Dropdown</span>
 							</button>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Editar</a></li>
-								<li><a href="#">Remover</a></li>
+								<li><a href="#" class="spa-edit-user" data-fullname="Joaquim">Editar</a></li>
+								<li><a href="#" class="spa-remove-user">Remover</a></li>
 							</ul>
 						</div>
 					</div> <!--.panel-body-->
@@ -120,10 +101,11 @@
 						<h3 class="panel-title">Fábio Vedovelli
 							<small class="pull-right">vedovelli@gmail.com</small></h3>
 					</div>
-					<div class="panel-body">
+					<div class="panel-body spa-user-card-body">
 						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
 						<strong>Cidade:</strong> Santo André<br>
 						<strong>Estado:	</strong> SP<br><br>
+						<p class="text-center"><small>Atualizado em 29/12/2014 as 22:45</small></p>
 						<div class="btn-group spa-acoes">
 							<button type="button" class="btn btn-default btn-sm">Ações</button>
 							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
@@ -131,8 +113,8 @@
 								<span class="sr-only">Toggle Dropdown</span>
 							</button>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Editar</a></li>
-								<li><a href="#">Remover</a></li>
+								<li><a href="#" class="spa-edit-user" data-fullname="Joao">Editar</a></li>
+								<li><a href="#" class="spa-remove-user">Remover</a></li>
 							</ul>
 						</div>
 					</div> <!--.panel-body-->
@@ -146,10 +128,11 @@
 						<h3 class="panel-title">Fábio Vedovelli
 							<small class="pull-right">vedovelli@gmail.com</small></h3>
 					</div>
-					<div class="panel-body">
+					<div class="panel-body spa-user-card-body">
 						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
 						<strong>Cidade:</strong> Santo André<br>
 						<strong>Estado:	</strong> SP<br><br>
+						<p class="text-center"><small>Atualizado em 29/12/2014 as 22:45</small></p>
 						<div class="btn-group spa-acoes">
 							<button type="button" class="btn btn-default btn-sm">Ações</button>
 							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
@@ -157,8 +140,8 @@
 								<span class="sr-only">Toggle Dropdown</span>
 							</button>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Editar</a></li>
-								<li><a href="#">Remover</a></li>
+								<li><a href="#" class="spa-edit-user" data-fullname="Jão">Editar</a></li>
+								<li><a href="#" class="spa-remove-user">Remover</a></li>
 							</ul>
 						</div>
 					</div> <!--.panel-body-->
@@ -170,10 +153,11 @@
 						<h3 class="panel-title">Fábio Vedovelli
 							<small class="pull-right">vedovelli@gmail.com</small></h3>
 					</div>
-					<div class="panel-body">
+					<div class="panel-body spa-user-card-body">
 						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
 						<strong>Cidade:</strong> Santo André<br>
 						<strong>Estado:	</strong> SP<br><br>
+						<p class="text-center"><small>Atualizado em 29/12/2014 as 22:45</small></p>
 						<div class="btn-group spa-acoes">
 							<button type="button" class="btn btn-default btn-sm">Ações</button>
 							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
@@ -181,8 +165,8 @@
 								<span class="sr-only">Toggle Dropdown</span>
 							</button>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Editar</a></li>
-								<li><a href="#">Remover</a></li>
+								<li><a href="#" class="spa-edit-user" data-fullname="Truta">Editar</a></li>
+								<li><a href="#" class="spa-remove-user">Remover</a></li>
 							</ul>
 						</div>
 					</div> <!--.panel-body-->
@@ -194,10 +178,11 @@
 						<h3 class="panel-title">Fábio Vedovelli
 							<small class="pull-right">vedovelli@gmail.com</small></h3>
 					</div>
-					<div class="panel-body">
+					<div class="panel-body spa-user-card-body">
 						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
 						<strong>Cidade:</strong> Santo André<br>
 						<strong>Estado:	</strong> SP<br><br>
+						<p class="text-center"><small>Atualizado em 29/12/2014 as 22:45</small></p>
 						<div class="btn-group spa-acoes">
 							<button type="button" class="btn btn-default btn-sm">Ações</button>
 							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
@@ -205,8 +190,8 @@
 								<span class="sr-only">Toggle Dropdown</span>
 							</button>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Editar</a></li>
-								<li><a href="#">Remover</a></li>
+								<li><a href="#" class="spa-edit-user" data-fullname="Ved">Editar</a></li>
+								<li><a href="#" class="spa-remove-user">Remover</a></li>
 							</ul>
 						</div>
 					</div> <!--.panel-body-->

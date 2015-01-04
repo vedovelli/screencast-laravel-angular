@@ -22,6 +22,10 @@ body{
 	display: none;
 }
 
+.spa-user-card-body{
+	height: 145px;
+}
+
 /* Animacao adicional ao modal Bootstrap */
 .modal {
     /*! adjust transition time */
@@ -45,7 +49,12 @@ body{
 
 /* Resize and reposition top*/
 
+.bootbox-confirm > .modal-dialog{
+	margin: 200px auto;
+	width: 400px !important;
+}
+
 .modal-dialog{
-	width: 760px;
+	/*width: 760px;*/
 	margin: 160px auto;
 }
