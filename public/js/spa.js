@@ -47,10 +47,6 @@
 			});
 		});
 
-		$selectCity.select2({
-			width: '100%',
-			placeholder: 'Inicie digitando o nome de uma cidade'
-		});
 
 		$selectOrdenacao.select2({
 			width: '100%',
@@ -63,6 +59,22 @@
 		}
 
 
+		$.getJSON('http://spa.app/api/cities', function(data) {
+		
+			var options = '';
+			$(data.cities).each(function() {
+			
+				options += '<option value='+this.city+'>'+this.city+'</option>';
+			});
+
+			$selectCity.html(options);
+
+			$selectCity.select2({
+				width: '100%',
+				placeholder: 'Inicie digitando o nome de uma cidade'
+			});
+
+		});
 
 
 		var userForm = '

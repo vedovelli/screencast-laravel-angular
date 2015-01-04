@@ -6,11 +6,8 @@
 			<form action="#">
 				<div class="form-group">
 					<label for="selectCity">filtre por Cidade</label>
-					<select name="city_filter" id="selectCity" multiple>
-						<option value="Santo André">Santo André</option>
-						<option value="São Paulo">São Paulo</option>
-						<option value="São Caetano do Sul">São Caetano do Sul</option>
-					</select>
+					<!--Cidades são carregadas dinamicamente-->
+					<select name="city_filter" id="selectCity" multiple></select>
 				</div>
 			</form>
 		</div>
