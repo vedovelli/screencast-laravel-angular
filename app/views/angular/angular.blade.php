@@ -2,6 +2,9 @@
 
 @section('content')
 	<!-- @include('angular.strictly_angular') -->
+	
+
+<!--Filters-->
 	<h3>Filtros</h3>
 	<div class="row">
 		<div class="col-md-6">
@@ -36,4 +39,166 @@
 			</div>
 		</div>
 	</div>
+<!--/Filters-->
+
+
+<!--User List-->
+	<div class="spa-user-list">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="panel panel-info spa-user-item">
+					<div class="panel-heading">
+						<h3 class="panel-title">Fábio Vedovelli
+							<small class="pull-right">vedovelli@gmail.com</small></h3>
+					</div>
+					<div class="panel-body">
+						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
+						<strong>Cidade:</strong> Santo André<br>
+						<strong>Estado:	</strong> SP<br><br>
+						<div class="btn-group spa-acoes">
+							<button type="button" class="btn btn-default btn-sm">Ações</button>
+							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
+								<span class="caret"></span>
+								<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Editar</a></li>
+								<li><a href="#">Remover</a></li>
+							</ul>
+						</div>
+					</div> <!--.panel-body-->
+				</div> <!--.panel panel-info spa-user-item-->
+			</div> <!--.col-md-4-->
+			<div class="col-md-4">
+				<div class="panel panel-info spa-user-item">
+					<div class="panel-heading">
+						<h3 class="panel-title">Fábio Vedovelli
+							<small class="pull-right">vedovelli@gmail.com</small></h3>
+					</div>
+					<div class="panel-body">
+						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
+						<strong>Cidade:</strong> Santo André<br>
+						<strong>Estado:	</strong> SP<br><br>
+						<div class="btn-group spa-acoes">
+							<button type="button" class="btn btn-default btn-sm">Ações</button>
+							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
+								<span class="caret"></span>
+								<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Editar</a></li>
+								<li><a href="#">Remover</a></li>
+							</ul>
+						</div>
+					</div> <!--.panel-body-->
+				</div> <!--.panel panel-info spa-user-item-->
+			</div> <!--.col-md-4-->
+			<div class="col-md-4">
+				<div class="panel panel-info spa-user-item">
+					<div class="panel-heading">
+						<h3 class="panel-title">Fábio Vedovelli
+							<small class="pull-right">vedovelli@gmail.com</small></h3>
+					</div>
+					<div class="panel-body">
+						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
+						<strong>Cidade:</strong> Santo André<br>
+						<strong>Estado:	</strong> SP<br><br>
+						<div class="btn-group spa-acoes">
+							<button type="button" class="btn btn-default btn-sm">Ações</button>
+							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
+								<span class="caret"></span>
+								<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Editar</a></li>
+								<li><a href="#">Remover</a></li>
+							</ul>
+						</div>
+					</div> <!--.panel-body-->
+				</div> <!--.panel panel-info spa-user-item-->
+			</div> <!--.col-md-4-->
+		</div> <!--.row-->
+		<div class="row">
+			<div class="col-md-4">
+				<div class="panel panel-info spa-user-item">
+					<div class="panel-heading">
+						<h3 class="panel-title">Fábio Vedovelli
+							<small class="pull-right">vedovelli@gmail.com</small></h3>
+					</div>
+					<div class="panel-body">
+						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
+						<strong>Cidade:</strong> Santo André<br>
+						<strong>Estado:	</strong> SP<br><br>
+						<div class="btn-group spa-acoes">
+							<button type="button" class="btn btn-default btn-sm">Ações</button>
+							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
+								<span class="caret"></span>
+								<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Editar</a></li>
+								<li><a href="#">Remover</a></li>
+							</ul>
+						</div>
+					</div> <!--.panel-body-->
+				</div> <!--.panel panel-info spa-user-item-->
+			</div> <!--.col-md-4-->
+			<div class="col-md-4">
+				<div class="panel panel-info spa-user-item">
+					<div class="panel-heading">
+						<h3 class="panel-title">Fábio Vedovelli
+							<small class="pull-right">vedovelli@gmail.com</small></h3>
+					</div>
+					<div class="panel-body">
+						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
+						<strong>Cidade:</strong> Santo André<br>
+						<strong>Estado:	</strong> SP<br><br>
+						<div class="btn-group spa-acoes">
+							<button type="button" class="btn btn-default btn-sm">Ações</button>
+							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
+								<span class="caret"></span>
+								<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Editar</a></li>
+								<li><a href="#">Remover</a></li>
+							</ul>
+						</div>
+					</div> <!--.panel-body-->
+				</div> <!--.panel panel-info spa-user-item-->
+			</div> <!--.col-md-4-->
+			<div class="col-md-4">
+				<div class="panel panel-info spa-user-item">
+					<div class="panel-heading">
+						<h3 class="panel-title">Fábio Vedovelli
+							<small class="pull-right">vedovelli@gmail.com</small></h3>
+					</div>
+					<div class="panel-body">
+						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
+						<strong>Cidade:</strong> Santo André<br>
+						<strong>Estado:	</strong> SP<br><br>
+						<div class="btn-group spa-acoes">
+							<button type="button" class="btn btn-default btn-sm">Ações</button>
+							<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
+								<span class="caret"></span>
+								<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Editar</a></li>
+								<li><a href="#">Remover</a></li>
+							</ul>
+						</div>
+					</div> <!--.panel-body-->
+				</div> <!--.panel panel-info spa-user-item-->
+			</div> <!--.col-md-4-->
+		</div> <!--.row-->
+	</div> <!--.spa-user-list-->
+<!--/User List-->
+
+<!--Pagination-->
+
+<!--/Pagination-->
+
+
+
 @stop

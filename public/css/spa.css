@@ -13,3 +13,11 @@ body{
 .spa-container-btn-novo button{
 	width: 100%;
 }
+
+.spa-user-item{
+	cursor: pointer;
+}
+
+.spa-acoes{
+	display: none;
+}

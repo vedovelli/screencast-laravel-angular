@@ -4,8 +4,19 @@
 	
 		var 	$txtEmail = $('#txtEmail'),
 				$selectCity = $('#selectCity'),
+				$spaUserList = $('.spa-user-list'),
 				$selectOrdenacao = $('#selectOrdenacao')
 		;
+
+		$spaUserList.on('mouseenter', '.spa-user-item', function(event) {
+		
+			$(event.currentTarget).find('.spa-acoes').show();
+		});
+
+		$spaUserList.on('mouseleave', '.spa-user-item', function(event) {
+		
+			$(event.currentTarget).find('.spa-acoes').hide();
+		});
 
 		$selectCity.select2({
 			width: '100%',
