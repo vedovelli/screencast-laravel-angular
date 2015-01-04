@@ -14,3 +14,5 @@ tests/_output/*
 bower_components
 config.codekit
 public/bootstrap
+public/select2-bootstrap3-css/
+public/select2/

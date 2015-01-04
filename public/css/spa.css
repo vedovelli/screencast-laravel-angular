@@ -5,3 +5,11 @@ body{
 .spa-login-box{
 	margin-top: 150px;
 }
+
+.spa-container-btn-novo{
+	padding-top: 25px;
+}
+
+.spa-container-btn-novo button{
+	width: 100%;
+}

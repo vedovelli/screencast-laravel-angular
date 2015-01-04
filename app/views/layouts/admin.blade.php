@@ -20,6 +20,14 @@
     <!-- Custom Fonts -->
     <link href="/sbadmin/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- Select2 -->
+    <link href="/select2/select2.css" rel="stylesheet">
+    <link href="/select2-bootstrap3-css/select2-bootstrap.css" rel="stylesheet">
+
+    <!-- Local CSS -->
+    <link href="/css/spa.css" rel="stylesheet">
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
