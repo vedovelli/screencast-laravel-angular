@@ -12,7 +12,7 @@
 		
 			$http.get('http://spa.app/api/user').success(function(data) {
 			
-				$scope.users = data.data;
+				$scope.users = data.users;
 			});
 		}();
 	}]);

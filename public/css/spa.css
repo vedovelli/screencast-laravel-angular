@@ -2,6 +2,10 @@ body{
 	margin-top: 70px;
 }
 
+.gravatar{
+	border-radius: 10px;
+}
+
 .spa-login-box{
 	margin-top: 150px;
 }
