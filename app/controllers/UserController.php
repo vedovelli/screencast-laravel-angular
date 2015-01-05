@@ -11,7 +11,7 @@ class UserController extends \BaseController {
 
 	public function index()
 	{
-		$user_list = $this->userModel->list_users(9);
+		$user_list = $this->userModel->list_users(3);
 
 		return Response::json($user_list, 200);
 	}

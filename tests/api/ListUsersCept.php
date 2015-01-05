@@ -11,8 +11,8 @@ $I->sendGET('user');
 $I->seeResponseIsJson();
 
 $I->seeResponseContainsJson([
-	'per_page' => 9,
+	'per_page' => 3,
 	'current_page' => 1,
 	'from' => 1,
-	'to' => 9,
+	'to' => 3,
 ]);

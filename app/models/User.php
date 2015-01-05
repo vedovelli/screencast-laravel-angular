@@ -20,7 +20,29 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	public function list_users($limit = 10)
 	{
-		return $this->paginate($limit);
+		$paginator = $this->paginate($limit);
+
+		$users = $paginator->getItems();
+
+		foreach ($users as $index => $user) {
+			
+			$user['gravatar'] = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $user['email'] ) ) ) . "&s=200";
+			$users[$index] = $user;
+		}
+		
+		$response = [
+			'users'   => $users,
+			'pagination' => [
+				'total'        => $paginator->getTotal(),
+				'per_page'     => $paginator->getPerPage(),
+				'current_page' => $paginator->getCurrentPage(),
+				'last_page'    => $paginator->getLastPage(),
+				'from'         => $paginator->getFrom(),
+				'to'           => $paginator->getTo()
+			]
+		];
+
+		return $response;
 	}
 
 	public function get_user($id)
