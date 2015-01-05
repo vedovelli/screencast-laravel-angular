@@ -1,147 +1,16 @@
-<div ng-app="users">
+<div ng-app="user">
 
-<user-filter></user-filter>
+<user-filter class="user-filter"></user-filter>
 
 
 <!--User List-->
-	<div class="spa-user-list">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="panel panel-info spa-user-item">
-					<div class="panel-heading">
-						<h3 class="panel-title">Fábio Vedovelli
-							<small class="pull-right">vedovelli@gmail.com</small></h3>
-					</div>
-					<div class="panel-body spa-user-card-body">
-						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
-						<strong>Cidade:</strong> Santo André<br>
-						<strong>Estado:	</strong> SP<br><br>
-						<p class="text-center"><small><em>Atualizado em 29/12/2014 as 22:45</em></small></p>
-						<div class="spa-user-actions">
-							<button type="button" data-fullname="Joaquim" class="btn btn-success btn-xs spa-edit-user">
-								<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar
-							</button>
-							<button type="button" class="btn btn-danger btn-xs spa-remove-user">
-								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir
-							</button>
-						</div>
-					</div> <!--.panel-body-->
-				</div> <!--.panel panel-info spa-user-item-->
-			</div> <!--.col-md-4-->
-			<div class="col-md-4">
-				<div class="panel panel-info spa-user-item">
-					<div class="panel-heading">
-						<h3 class="panel-title">Fábio Vedovelli
-							<small class="pull-right">vedovelli@gmail.com</small></h3>
-					</div>
-					<div class="panel-body spa-user-card-body">
-						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
-						<strong>Cidade:</strong> Santo André<br>
-						<strong>Estado:	</strong> SP<br><br>
-						<p class="text-center"><small><em>Atualizado em 29/12/2014 as 22:45</em></small></p>
-						<div class="spa-user-actions">
-							<button type="button" data-fullname="Joaquim" class="btn btn-success btn-xs spa-edit-user">
-								<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar
-							</button>
-							<button type="button" class="btn btn-danger btn-xs spa-remove-user">
-								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir
-							</button>
-						</div>
-					</div> <!--.panel-body-->
-				</div> <!--.panel panel-info spa-user-item-->
-			</div> <!--.col-md-4-->
-			<div class="col-md-4">
-				<div class="panel panel-info spa-user-item">
-					<div class="panel-heading">
-						<h3 class="panel-title">Fábio Vedovelli
-							<small class="pull-right">vedovelli@gmail.com</small></h3>
-					</div>
-					<div class="panel-body spa-user-card-body">
-						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
-						<strong>Cidade:</strong> Santo André<br>
-						<strong>Estado:	</strong> SP<br><br>
-						<p class="text-center"><small><em>Atualizado em 29/12/2014 as 22:45</em></small></p>
-						<div class="spa-user-actions">
-							<button type="button" data-fullname="Joaquim" class="btn btn-success btn-xs spa-edit-user">
-								<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar
-							</button>
-							<button type="button" class="btn btn-danger btn-xs spa-remove-user">
-								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir
-							</button>
-						</div>
-					</div> <!--.panel-body-->
-				</div> <!--.panel panel-info spa-user-item-->
-			</div> <!--.col-md-4-->
-		</div> <!--.row-->
-		<div class="row">
-			<div class="col-md-4">
-				<div class="panel panel-info spa-user-item">
-					<div class="panel-heading">
-						<h3 class="panel-title">Fábio Vedovelli
-							<small class="pull-right">vedovelli@gmail.com</small></h3>
-					</div>
-					<div class="panel-body spa-user-card-body">
-						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
-						<strong>Cidade:</strong> Santo André<br>
-						<strong>Estado:	</strong> SP<br><br>
-						<p class="text-center"><small><em>Atualizado em 29/12/2014 as 22:45</em></small></p>
-						<div class="spa-user-actions">
-							<button type="button" data-fullname="Joaquim" class="btn btn-success btn-xs spa-edit-user">
-								<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar
-							</button>
-							<button type="button" class="btn btn-danger btn-xs spa-remove-user">
-								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir
-							</button>
-						</div>
-					</div> <!--.panel-body-->
-				</div> <!--.panel panel-info spa-user-item-->
-			</div> <!--.col-md-4-->
-			<div class="col-md-4">
-				<div class="panel panel-info spa-user-item">
-					<div class="panel-heading">
-						<h3 class="panel-title">Fábio Vedovelli
-							<small class="pull-right">vedovelli@gmail.com</small></h3>
-					</div>
-					<div class="panel-body spa-user-card-body">
-						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
-						<strong>Cidade:</strong> Santo André<br>
-						<strong>Estado:	</strong> SP<br><br>
-						<p class="text-center"><small><em>Atualizado em 29/12/2014 as 22:45</em></small></p>
-						<div class="spa-user-actions">
-							<button type="button" data-fullname="Joaquim" class="btn btn-success btn-xs spa-edit-user">
-								<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar
-							</button>
-							<button type="button" class="btn btn-danger btn-xs spa-remove-user">
-								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir
-							</button>
-						</div>
-					</div> <!--.panel-body-->
-				</div> <!--.panel panel-info spa-user-item-->
-			</div> <!--.col-md-4-->
-			<div class="col-md-4">
-				<div class="panel panel-info spa-user-item">
-					<div class="panel-heading">
-						<h3 class="panel-title">Fábio Vedovelli
-							<small class="pull-right">vedovelli@gmail.com</small></h3>
-					</div>
-					<div class="panel-body spa-user-card-body">
-						<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fábio Vedovelli" class="pull-right" width="90">
-						<strong>Cidade:</strong> Santo André<br>
-						<strong>Estado:	</strong> SP<br><br>
-						<p class="text-center"><small><em>Atualizado em 29/12/2014 as 22:45</em></small></p>
-						<div class="spa-user-actions">
-							<button type="button" data-fullname="Joaquim" class="btn btn-success btn-xs spa-edit-user">
-								<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar
-							</button>
-							<button type="button" class="btn btn-danger btn-xs spa-remove-user">
-								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir
-							</button>
-						</div>
-					</div> <!--.panel-body-->
-				</div> <!--.panel panel-info spa-user-item-->
-			</div> <!--.col-md-4-->
-		</div> <!--.row-->
-	</div> <!--.spa-user-list-->
+	<div class="spa-user-list" ng-controller="UserListController">
+		<div class="row" ng-repeat="user in users">
+			<div class="col-md-12">
+				<user-card ng-model="user"></user-card>
+			</div>
+		</div>
+	</div>
 <!--/User List-->
 
 <!--Pagination-->

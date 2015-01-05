@@ -48,33 +48,10 @@
 		});
 
 
-		$selectOrdenacao.select2({
-			width: '100%',
-			placeholder: 'Selecione uma nova ordenação para a lista'
-		});
-
 		if($txtEmail.length > 0)
 		{
 			$txtEmail.focus();
 		}
-
-
-		$.getJSON('http://spa.app/api/cities', function(data) {
-		
-			var options = '';
-			$(data.cities).each(function() {
-			
-				options += '<option value='+this.city+'>'+this.city+'</option>';
-			});
-
-			$selectCity.html(options);
-
-			$selectCity.select2({
-				width: '100%',
-				placeholder: 'Inicie digitando o nome de uma cidade'
-			});
-
-		});
 
 
 		var userForm = '
