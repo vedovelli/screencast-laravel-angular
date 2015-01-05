@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	var app = angular.module('user', []);
+	var app = angular.module('user', ['angular.filter']);
 
 	app.controller('UserListController', ['$scope','$http', function($scope, $http) {
 

@@ -5,11 +5,27 @@
 
 <!--User List-->
 	<div class="spa-user-list" ng-controller="UserListController">
-		<div class="row" ng-repeat="user in users">
-			<div class="col-md-12">
+		<!-- http://plnkr.co/edit/7DHxoHNhmUepbyWQEdr5?p=preview -->
+		<!-- <div class="row" ng-repeat="user in users track by $index" ng-if="$index%3==0">
+			<div class="col-md-4"
+				ng-repeat="i in [$index,$index+1,$index+2]"
+				ng-if="users[i]!=null">
+				<user-card ng-model="user"></user-card>
+			</div>
+		</div> -->
+		<div class="row" ng-repeat="user_group in users | groupBy:3">
+			<div class="col-md-4"
+				ng-repeat="user in user_group">
 				<user-card ng-model="user"></user-card>
 			</div>
 		</div>
+
+
+		 <!-- <div class=row ng-repeat="letters in alphabet | groupBy:4">
+    <div class="col-xs-3 letter-box" ng-repeat="letter in letters" >
+      <div>Letter {{$index+1}} is: <b> {{letter}}</b></div>
+    </div>
+  </div> -->
 	</div>
 <!--/User List-->
 
