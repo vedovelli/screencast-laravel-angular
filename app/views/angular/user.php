@@ -1,10 +1,10 @@
-<div ng-app="user">
+<div ng-app="user" ng-controller="UserListController">
 
 <user-filter class="user-filter"></user-filter>
 
 
 <!--User List-->
-	<div class="spa-user-list" ng-controller="UserListController">
+	<div class="spa-user-list">
 		<!-- http://plnkr.co/edit/7DHxoHNhmUepbyWQEdr5?p=preview -->
 		<div class="row" ng-repeat="user_group in users | groupBy:3">
 			<div class="col-md-4"
