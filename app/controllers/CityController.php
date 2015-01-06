@@ -13,7 +13,7 @@ class CityController extends \BaseController {
 
 		$response['description'] = 'The list of users\' cities';
 		
-		$response['cities'] = $cities;
+		$response['data'] = $cities;
 
 		return Response::json($response, 200);
 	}

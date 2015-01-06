@@ -16,13 +16,13 @@
 					var config = {};
 
 					if(attrs.source){
-						$http.get(attrs.source).success(function(data) {
+						$http.get(attrs.source).success(function(response) {
 							
 							var html = '';
 							
-							data.cities.forEach(function(city){
+							response.data.forEach(function(obj){
 
-								html += '<option value="'+city.city+'">'+city.city+'</option>';
+								html += '<option value="'+obj[attrs.property]+'">'+obj[attrs.property]+'</option>';
 							});
 
 							element.html(html);
