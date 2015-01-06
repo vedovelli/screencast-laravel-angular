@@ -13,12 +13,9 @@
 
 		var apiUrl = 'http://spa.app/api/user';
 	
-		this.fetch = function(callback) {
+		this.fetch = function() {
 		
-			$http.get(apiUrl).success(function(data) {
-			
-				callback(data);
-			});
+			return $http.get(apiUrl);
 		}
 
 		this.save = function(input, callback) {		
@@ -38,14 +35,9 @@
 			}
 		}
 
-		this.remove = function(input, callback) {
+		this.remove = function(input) {
 
-			$http.delete(apiUrl+'/'+input.id).success(function(data) {
-			
-				callback(data);
-			});
-
-			return {removed: true};
+			return $http.delete(apiUrl+'/'+input.id);
 		}
 	}]);
 })();

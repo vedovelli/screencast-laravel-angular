@@ -18,7 +18,7 @@
 
 		$scope.remove = function(user) {
 		
-			UserService.remove(user, function(data) {
+			UserService.remove(user).success(function(data) {
 			
 				if(data.success){
 
@@ -29,7 +29,7 @@
 	
 		$scope.init = function() {
 
-			UserService.fetch(function(data) {
+			UserService.fetch().success(function(data) {
 			
 				$scope.users = data.users;
 			});
