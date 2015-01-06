@@ -13,17 +13,26 @@
 
 		$scope.edit = function(user) {
 		
-			console.log(user);
+			bootbox.dialog({
+				title: 'Editar Usuário ' + user.fullname,
+				message: 'placeholder para o form'
+			});
 		}
 
 		$scope.remove = function(user) {
 		
-			UserService.remove(user).success(function(data) {
+			bootbox.confirm('Remover '+ user.fullname +'?', function(action) {
 			
-				if(data.success){
+				if(action) {
+					
+					UserService.remove(user).success(function(data) {
+					
+						if(data.success){
 
-					$scope.init();
-				}				
+							$scope.init();
+						}				
+					});
+				}
 			});
 		}
 	
@@ -44,7 +53,25 @@
 
 			restrict: 'E',
 
-			templateUrl: '/angular/partials/users.card.html'
+			templateUrl: '/angular/partials/users.card.html',
+
+			link: function($scope, $element, $attrs) {
+
+				/**
+				* TODO: ao inves de manipular aqui, on mouse enter ou leave
+				* setar propriedade no Ctrl e usar ng-show na view. (y)
+				*/
+			
+				$element.on('mouseenter', '.spa-user-item', function(event) {
+
+					$(event.currentTarget).find('.spa-user-actions').show();
+				});
+
+				$element.on('mouseleave', '.spa-user-item', function(event) {
+
+					$(event.currentTarget).find('.spa-user-actions').hide();
+				});
+			}
 		};
 	});
 

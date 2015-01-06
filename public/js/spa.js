@@ -4,38 +4,7 @@
 
 	$(document).ready(function() { // Se inicia o uso da jQuery apenas após o DOM ter sido totalmente carregado
 	
-		var 	$txtEmail = $('#txtEmail'),
-				$spaUserList = $('.spa-user-list')
-		;
-
-		$spaUserList.on('mouseenter', '.spa-user-item', function(event) {
-		
-			$(event.currentTarget).find('.spa-user-actions').show();
-		});
-
-		$spaUserList.on('mouseleave', '.spa-user-item', function(event) {
-		
-			$(event.currentTarget).find('.spa-user-actions').hide();
-		});
-
-		$spaUserList.on('click', '.spa-remove-user', function(event) {
-		
-			bootbox.confirm('Tem certeza que deseja remover o usuário?', function(action) {
-			
-				console.log(action);
-			});
-		});
-
-		$spaUserList.on('click', '.spa-edit-user', function(event) {
-			
-			var fullname = $(this).data('fullname');
-		
-			bootbox.dialog({
-				title: 'Editar Usuário ' + fullname,
-				message: userForm
-			});
-		});
-
+		var $txtEmail = $('#txtEmail');
 
 		if($txtEmail.length > 0)
 		{

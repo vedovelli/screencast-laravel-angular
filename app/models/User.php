@@ -20,7 +20,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	public function list_users($limit = 10)
 	{
-		$paginator = $this->orderBy('id', 'asc')->paginate($limit);
+		$paginator = $this->orderBy('id', 'desc')->paginate($limit);
 
 		$users = $paginator->getItems();
 
