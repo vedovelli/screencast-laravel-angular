@@ -6,7 +6,7 @@
 			<div class="form-group">
 				<label for="selectCity">filtre por Cidade</label>
 				<!--Cidades são carregadas dinamicamente-->
-				<select name="city_filter" id="selectCity" class="form-control" multiple select2 source="http://spa.app/api/cities" property="city" placeholder="Selecione uma ou mais cidades"></select>
+				<select name="city_filter" class="form-control" multiple select2 source="http://spa.app/api/cities" property="city" placeholder="Selecione uma ou mais cidades"></select>
 			</div>
 		</form>
 	</div>
@@ -14,7 +14,7 @@
 		<form action="#">
 			<div class="form-group">
 				<label for="selectOrdenacao">ordenar por</label>
-				<select name="order_filter" id="selectOrdenacao" class="form-control" placeholder="Selecione a ordenação" select2>
+				<select name="order_filter" class="form-control" placeholder="Selecione a ordenação" select2>
 					<option selected></option>
 					<option value="1">por Nome descendente</option>
 					<option value="2">por Nome ascendente</option>

@@ -17,13 +17,12 @@
 		}();
 	}]);
 
-	app.controller('FilterController', function() {});
-
 	app.directive('userCard', function() {
 	
 		return {
 
 			restrict: 'E',
+
 			templateUrl: '/angular/partials/users.card.html'
 		};
 	});
@@ -33,13 +32,8 @@
 		return {
 
 			restrict: 'E',
-			templateUrl: '/angular/partials/users.filter.html',
-			controller: 'FilterController',
-			controllerAs: 'filterCtrl',
-			link: function($scope, $element, $attrs, filterCtrl){
 
-				$element.show();
-			}
+			templateUrl: '/angular/partials/users.filter.html'
 		};
 	});
 
