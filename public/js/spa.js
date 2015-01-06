@@ -5,10 +5,7 @@
 	$(document).ready(function() { // Se inicia o uso da jQuery apenas após o DOM ter sido totalmente carregado
 	
 		var 	$txtEmail = $('#txtEmail'),
-				$selectCity = $('#selectCity'),
-				$spaUserList = $('.spa-user-list'),
-				$selectOrdenacao = $('#selectOrdenacao'),
-				$buttonNovoUsuario = $('.spa-container-btn-novo').find('button');
+				$spaUserList = $('.spa-user-list')
 		;
 
 		$spaUserList.on('mouseenter', '.spa-user-item', function(event) {
@@ -35,14 +32,6 @@
 		
 			bootbox.dialog({
 				title: 'Editar Usuário ' + fullname,
-				message: userForm
-			});
-		});
-
-		$buttonNovoUsuario.on('click', function() {
-		
-			bootbox.dialog({
-				title: 'Criar novo usuário',
 				message: userForm
 			});
 		});

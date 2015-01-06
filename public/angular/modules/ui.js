@@ -1,3 +1,6 @@
+/**
+* Custom user interface
+*/
 (function() {
 
 	'use strict';
