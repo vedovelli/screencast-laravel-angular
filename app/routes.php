@@ -3,16 +3,16 @@
 View::share('currentUser', Auth::user());
 
 Route::get('/', [
-	'before' => 'auth', 
-	'as' => 'home', 
+	'before' => 'auth',
+	'as' => 'home',
 	'uses' => 'HomeController@home'
 ]);
 
 Route::controller('password', 'RemindersController');
 
 Route::get('login', [
-	'as' => 'login_path', 
-	function() 
+	'as' => 'login_path',
+	function()
 	{
 		return View::make('login.login');
 	}
@@ -35,8 +35,8 @@ Route::post('login', [
 
 
 Route::group(array('prefix' => 'api'), function() {
- 
-	Route::resource('user', 'UserController');	
+
+	Route::resource('user', 'UserController');
 
 	Route::get('cities', 'CityController@listCities');
 });

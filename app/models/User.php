@@ -18,9 +18,24 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		$this->attributes['password'] = Hash::make($value);
 	}
 
-	public function list_users($limit = 10)
+	public function list_users($cities, $orderBy, $limit = 10, $page = 1)
 	{
-		$paginator = $this->orderBy('id', 'desc')->paginate($limit);
+
+		$paginator = $this;
+
+		if(!is_null($cities)){
+
+			$cities = explode(',',$cities);
+			$paginator = $paginator->wherein('city', $cities);
+		}
+
+		if(!is_null($orderBy)){
+
+			$orderBy = explode('|', $orderBy);
+			$paginator = $paginator->orderBy($orderBy[0], $orderBy[1]);
+		}
+
+		$paginator = $paginator->paginate($limit);
 
 		$users = $paginator->getItems();
 

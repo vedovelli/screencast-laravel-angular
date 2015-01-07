@@ -11,7 +11,32 @@ class UserController extends \BaseController {
 
 	public function index()
 	{
-		$user_list = $this->userModel->list_users(9);
+		$cities = null;
+		$orderBy = null;
+		$limit = null;
+		$page = null;
+
+		if(Input::get('cities') != 'undefined'){
+
+			$cities = Input::get('cities');
+		}
+
+		if(Input::get('orderBy') != 'undefined'){
+
+			$orderBy = Input::get('orderBy');
+		}
+
+		if(Input::get('limit') != 'undefined'){
+
+			$limit = Input::get('limit');
+		}
+
+		if(Input::get('page') != 'undefined'){
+
+			$page = Input::get('page');
+		}
+
+		$user_list = $this->userModel->list_users($cities, $orderBy, $limit, $page);
 
 		return Response::json($user_list, 200);
 	}

@@ -13,19 +13,30 @@
 
 		$scope.user = {};
 
+		$scope.$watch('filter_cities', function(value) {
+
+			if(value !== undefined) $scope.fetchUsers();
+		});
+
+		$scope.$watch('filter_orderBy', function(value) {
+
+			if(value !== undefined) $scope.fetchUsers();
+		});
+
 		$scope.new = function() {
 
 			$scope.user = {
-				fullname: 'Ved',
-				username: 'vedovelli',
-				email: 'vedovelli@gmail.com',
-				city: 'Sao Paulo',
-				state: 'SP'
+				// fullname: 'Ved',
+				// username: 'vedovelli',
+				// email: 'vedovelli@gmail.com',
+				// city: 'Sao Paulo',
+				// state: 'SP'
 			};
 		}
 
 		$scope.edit = function(user) {
-
+			console.log($scope.filter_cities);
+			console.log($scope.filter_orderBy);
 			$scope.user = user;
 		}
 
@@ -40,7 +51,7 @@
 						form.modal('hide');
 
 					$scope.user = {};
-					$scope.init();
+					$scope.fetchUsers();
 
 				}
 			});
@@ -56,22 +67,38 @@
 
 						if(data.success){
 
-							$scope.init();
+							$scope.fetchUsers();
 						}
 					});
 				}
 			});
 		}
 
-		$scope.init = function() {
+		$scope.fetchUsers = function() {
 
-			UserService.fetch().success(function(data) {
+			if($scope.filter_cities == '') {
+
+				$scope.filter_cities = undefined;
+			}
+
+			if($scope.filter_orderBy == '') {
+
+				$scope.filter_orderBy = undefined;
+			}
+
+			UserService.fetch({
+
+				cities: $scope.filter_cities,
+				orderBy: $scope.filter_orderBy,
+				limit: 6,
+				page: 1
+			}).success(function(data) {
 
 				$scope.users = data.users;
 			});
 		};
 
-		$scope.init();
+		$scope.fetchUsers();
 	}]);
 
 	app.directive('userCard', function() {

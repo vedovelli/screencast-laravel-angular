@@ -13,9 +13,9 @@
 
 		var apiUrl = 'http://spa.app/api/user';
 
-		this.fetch = function() {
+		this.fetch = function(list_state) {
 
-			return $http.get(apiUrl);
+			return $http.get(apiUrl+'?limit='+encodeURIComponent(list_state.limit)+'&page='+encodeURIComponent(list_state.page)+'&cities='+encodeURIComponent(list_state.cities)+'&orderBy='+encodeURIComponent(list_state.orderBy));
 		}
 
 		this.save = function(input) {
