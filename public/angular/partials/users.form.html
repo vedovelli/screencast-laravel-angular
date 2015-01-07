@@ -9,7 +9,8 @@
 
 		<form action="#" class="spa-user-form">
 
-			<img src="/img/ved_oficial_2015_headshot.jpg" alt="Fabio Vedovelli" width="200" class="spa-user-form-image">
+			<img ng-src="{{user.gravatar}}" alt="{{user.fullname}}" width="200" class="spa-user-form-image" ng-if="user.gravatar">
+			<img src="/img/placeholder.png" width="200" class="spa-user-form-image" ng-if="!user.gravatar">
 
 			<h4>Todos os campos são de preenchimento obrigatório</h4>
 

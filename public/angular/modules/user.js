@@ -23,6 +23,13 @@
 			if(value !== undefined) $scope.fetchUsers();
 		});
 
+		$scope.clear = function() {
+
+			$scope.filter_cities = undefined;
+			$scope.filter_orderBy = undefined;
+			$scope.fetchUsers();
+		}
+
 		$scope.new = function() {
 
 			$scope.user = {
@@ -35,8 +42,7 @@
 		}
 
 		$scope.edit = function(user) {
-			console.log($scope.filter_cities);
-			console.log($scope.filter_orderBy);
+
 			$scope.user = user;
 		}
 

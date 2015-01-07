@@ -19,6 +19,11 @@
 
 					var config = {};
 
+					if(attrs.allowclear) {
+
+						config.allowClear = attrs.allowclear;
+					}
+
 					if(attrs.source){
 
 						/**
