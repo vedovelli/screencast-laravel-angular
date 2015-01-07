@@ -13,6 +13,8 @@
 
 		$scope.user = {};
 
+		$scope.pagination = {};
+
 		$scope.$watch('filter_cities', function(value) {
 
 			if(value !== undefined) $scope.fetchUsers();
@@ -32,13 +34,7 @@
 
 		$scope.new = function() {
 
-			$scope.user = {
-				// fullname: 'Ved',
-				// username: 'vedovelli',
-				// email: 'vedovelli@gmail.com',
-				// city: 'Sao Paulo',
-				// state: 'SP'
-			};
+			$scope.user = {};
 		}
 
 		$scope.edit = function(user) {
@@ -101,6 +97,7 @@
 			}).success(function(data) {
 
 				$scope.users = data.users;
+				$scope.pagination = data.pagination;
 			});
 		};
 

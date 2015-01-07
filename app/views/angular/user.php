@@ -19,6 +19,7 @@
 
 <!--Pagination-->
 	<nav class="text-center">
+		<p>Mostrando {{users.length}} de {{pagination.total}} usuários</p>
 		<ul class="pagination">
 			<li>
 				<a href="#" aria-label="Previous">

@@ -7,7 +7,7 @@
       </div>
       <div class="modal-body">
 
-		<form action="#" class="spa-user-form">
+		<form method="post" class="spa-user-form" ng-submit="save()">
 
 			<img ng-src="{{user.gravatar}}" alt="{{user.fullname}}" width="200" class="spa-user-form-image" ng-if="user.gravatar">
 			<img src="/img/placeholder.png" width="200" class="spa-user-form-image" ng-if="!user.gravatar">
@@ -18,7 +18,7 @@
 				<div class="col-md-5">
 					<div class="form-group">
 						<label for="txtFullname">Nome Completo</label>
-						<input type="text" class="form-control" name="fullname" id="txtFullname" required ng-model="user.fullname">
+						<input type="text" class="form-control" name="fullname" id="txtFullname" required ng-model="user.fullname" autofocus>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -39,13 +39,13 @@
 				<div class="col-md-3">
 					<div class="form-group">
 						<label for="txtPassword">Senha</label>
-						<input type="password" class="form-control" name="password" id="txtPassword" required>
+						<input type="password" class="form-control" name="password" id="txtPassword">
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="form-group">
 						<label for="txtPasswordConfirmation">Confirmação de Senha</label>
-						<input type="password" class="form-control" name="password_confirmation" id="txtPasswordConfirmation" required>
+						<input type="password" class="form-control" name="password_confirmation" id="txtPasswordConfirmation">
 					</div>
 				</div>
 				<div class="col-md-offset-3"></div>
@@ -55,7 +55,7 @@
 				<div class="col-md-2">
 					<div class="form-group">
 						<label for="txtCep">CEP</label>
-						<input type="text" class="form-control" name="cep" id="txtCep" required ng-model="user.cep">
+						<input type="text" class="form-control" name="cep" id="txtCep" ng-model="user.cep">
 					</div>
 				</div>
 				<div class="col-md-5">
@@ -72,14 +72,14 @@
 				</div>
 				<div class="col-md-offset-3"></div>
 			</div>
-
+			<button type="submit" class="btn btn-primary hide">Salvar</button>
 		</form>
 
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary" ng-click="save()">Salvar</button>
+        <button type="button" class="btn btn-primary" ng-click="salvar()">Salvar</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
