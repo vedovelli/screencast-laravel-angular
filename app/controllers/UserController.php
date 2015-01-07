@@ -11,7 +11,7 @@ class UserController extends \BaseController {
 
 	public function index()
 	{
-		$user_list = $this->userModel->list_users(3);
+		$user_list = $this->userModel->list_users(9);
 
 		return Response::json($user_list, 200);
 	}
@@ -30,14 +30,14 @@ class UserController extends \BaseController {
 		$user = $this->userModel->get_user($id);
 
 		$response = $this->prepare_response(['user' => $user, 'description' => 'Selected user']);
-		
+
 		return Response::json($response, 200);
 	}
 
 	public function update($id)
 	{
 		$user = $this->userModel->update_user($id, Input::all());
-		
+
 		$response = $this->prepare_response(['user' => $user, 'description' => 'Recently updated user']);
 
 		return Response::json($response, 200);
@@ -59,7 +59,7 @@ class UserController extends \BaseController {
 		$response['success'] = isset($params['user']);
 
 		$response['description'] = $params['description'];
-		
+
 		$response['user'] = $params['user'];
 
 		return $response;

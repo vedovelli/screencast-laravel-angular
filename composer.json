@@ -5,8 +5,7 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "4.2.*",
-		"barryvdh/laravel-cors": "0.2.x"
+		"laravel/framework": "4.2.*"
 	},
 	"require-dev": {
 		"way/generators": "~3.0",

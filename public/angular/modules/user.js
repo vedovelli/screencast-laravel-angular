@@ -15,7 +15,13 @@
 
 		$scope.new = function() {
 
-			$scope.user = {};
+			$scope.user = {
+				fullname: 'Ved',
+				username: 'vedovelli',
+				email: 'vedovelli@gmail.com',
+				city: 'Sao Paulo',
+				state: 'SP'
+			};
 		}
 
 		$scope.edit = function(user) {
@@ -29,7 +35,10 @@
 
 				if(data.success){
 
-					angular.element(userForm).modal('hide');
+					var form = angular.element(userForm);
+						form.find('input:password').val('');
+						form.modal('hide');
+
 					$scope.user = {};
 					$scope.init();
 

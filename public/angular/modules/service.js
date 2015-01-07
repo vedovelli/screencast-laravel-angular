@@ -22,7 +22,7 @@
 
 			if(input.id > 0) {
 
-				return $http.put(apiUrl, input);
+				return $http.put(apiUrl+'/'+input.id, input);
 			} else {
 
 				return $http.post(apiUrl, input);
