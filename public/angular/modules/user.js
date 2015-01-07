@@ -7,7 +7,7 @@
 
 	var app = angular.module('user', ['angular.filter', 'ui.spa', 'service.spa']);
 
-	app.controller('UserController', ['$scope', 'UserService', function($scope, UserService) {
+	app.controller('UserController', ['$scope', '$window', 'UserService', function($scope, $window, UserService) {
 
 		$scope.users = [];
 
@@ -21,6 +21,20 @@
 		$scope.edit = function(user) {
 
 			$scope.user = user;
+		}
+
+		$scope.save = function(){
+
+			UserService.save($scope.user).success(function(data) {
+
+				if(data.success){
+
+					angular.element(userForm).modal('hide');
+					$scope.user = {};
+					$scope.init();
+
+				}
+			});
 		}
 
 		$scope.remove = function(user) {

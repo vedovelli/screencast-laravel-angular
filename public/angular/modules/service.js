@@ -18,20 +18,14 @@
 			return $http.get(apiUrl);
 		}
 
-		this.save = function(input, callback) {
+		this.save = function(input) {
 
 			if(input.id > 0) {
 
-				$http.put(apiUrl).success(function(data) {
-
-					callback(data);
-				});
+				return $http.put(apiUrl, input);
 			} else {
 
-				$http.post(apiUrl).success(function(data) {
-
-					callback(data);
-				});
+				return $http.post(apiUrl, input);
 			}
 		}
 
