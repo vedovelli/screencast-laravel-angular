@@ -12,19 +12,22 @@
 		return {
 
 			restrict: 'A',
-			
+
 			controller: function() {
-			
+
 				this.init = function(element, attrs){
 
 					var config = {};
 
 					if(attrs.source){
 
+						/**
+						* TODO: Passar para Service a chamada à API
+						*/
 						$http.get(attrs.source).success(function(response) {
-							
+
 							var html = '';
-							
+
 							response.data.forEach(function(obj){
 
 								html += '<option value="'+obj[attrs.property]+'">'+obj[attrs.property]+'</option>';
@@ -39,9 +42,9 @@
 			},
 
 			controllerAs: 'select2Ctrl',
-			
+
 			link: function($scope, $element, $attrs, select2Ctrl){
-			
+
 				select2Ctrl.init($element, $attrs);
 			}
 		};

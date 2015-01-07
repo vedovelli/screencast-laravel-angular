@@ -1,6 +1,8 @@
-<div ng-app="user" ng-controller="UserListController">
+<div ng-app="user" ng-controller="UserController">
 
-<user-filter class="user-filter"></user-filter>
+	<user-form></user-form>
+
+	<user-filter></user-filter>
 
 
 <!--User List-->

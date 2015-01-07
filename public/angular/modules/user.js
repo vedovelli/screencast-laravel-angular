@@ -7,39 +7,43 @@
 
 	var app = angular.module('user', ['angular.filter', 'ui.spa', 'service.spa']);
 
-	app.controller('UserListController', ['$scope', 'UserService', function($scope, UserService) {
+	app.controller('UserController', ['$scope', 'UserService', function($scope, UserService) {
 
 		$scope.users = [];
 
+		$scope.user = {};
+
+		$scope.new = function() {
+
+			$scope.user = {};
+		}
+
 		$scope.edit = function(user) {
-		
-			bootbox.dialog({
-				title: 'Editar Usuário ' + user.fullname,
-				message: 'placeholder para o form'
-			});
+
+			$scope.user = user;
 		}
 
 		$scope.remove = function(user) {
-		
+
 			bootbox.confirm('Remover '+ user.fullname +'?', function(action) {
-			
+
 				if(action) {
-					
+
 					UserService.remove(user).success(function(data) {
-					
+
 						if(data.success){
 
 							$scope.init();
-						}				
+						}
 					});
 				}
 			});
 		}
-	
+
 		$scope.init = function() {
 
 			UserService.fetch().success(function(data) {
-			
+
 				$scope.users = data.users;
 			});
 		};
@@ -48,7 +52,7 @@
 	}]);
 
 	app.directive('userCard', function() {
-	
+
 		return {
 
 			restrict: 'E',
@@ -61,7 +65,7 @@
 				* TODO: ao inves de manipular aqui, on mouse enter ou leave
 				* setar propriedade no Ctrl e usar ng-show na view. (y)
 				*/
-			
+
 				$element.on('mouseenter', '.spa-user-item', function(event) {
 
 					$(event.currentTarget).find('.spa-user-actions').show();
@@ -76,35 +80,23 @@
 	});
 
 	app.directive('userFilter', function() {
-	
+
 		return {
 
 			restrict: 'E',
 
-			templateUrl: '/angular/partials/users.filter.html',
-
-			controller: function() {
-			
-				this.init = function($element, $attrs) {
-
-					var button = $element.find('.spa-container-btn-novo').find('button');
-				
-					button.on('click', function() {
-		
-						bootbox.dialog({
-							
-							title: 'Criar novo usuário',
-							message: 'placeholder para o form'
-						});
-					});
-				}	
-			},
-
-			link: function($scope, $element, $attrs, filterCtrl) {
-			
-				filterCtrl.init($element, $attrs);
-			}
+			templateUrl: '/angular/partials/users.filter.html'
 		};
+	});
+
+	app.directive('userForm', function() {
+
+		return {
+
+			restrict: 'E',
+
+			templateUrl: '/angular/partials/users.form.html'
+		}
 	});
 
 })();
