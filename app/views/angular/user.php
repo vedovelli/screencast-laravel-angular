@@ -19,30 +19,22 @@
 
 <!--Pagination-->
 	<nav class="text-center">
-		<p>Mostrando {{users.length}} de {{pagination.total}} usuários</p>
-		<ul class="pagination">
-			<li>
-				<a href="#" aria-label="Previous">
-				<span aria-hidden="true">&laquo;</span>
-				</a>
-			</li>
-			<li><a href="#">1</a></li>
-			<li class="active"><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li><a href="#">6</a></li>
-			<li><a href="#">7</a></li>
-			<li><a href="#">8</a></li>
-			<li><a href="#">9</a></li>
-			<li><a href="#">10</a></li>
-			<li><a href="#">11</a></li>
-			<li>
-				<a href="#" aria-label="Next">
-				<span aria-hidden="true">&raquo;</span>
-			</a>
-			</li>
-		</ul>
+		<p>Mostrando {{pagination.from}} a {{pagination.to}} de {{pagination.total}} usuários</p>
+		<div>
+			<ul class="pagination">
+				<li ng-class="{disabled: currentPage == 0}">
+					<a href ng-click="prevPage()">« Prev</a>
+				</li>
+				<li ng-repeat="n in range track by $index"
+				ng-class="{active: n == currentPage}"
+				ng-click="setPage()">
+					<a href ng-bind="n"></a>
+				</li>
+				<li ng-class="{disabled: currentPage == pagination.last_page}">
+					<a href ng-click="nextPage()">Next »</a>
+				</li>
+			</ul>
+		</div>
 	</nav>
 <!--/Pagination-->
 </div>
