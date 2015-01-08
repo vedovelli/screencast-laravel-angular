@@ -136,6 +136,8 @@
 			});
 		};
 
+		// TODO simplificar este algoritmo, para algo que se possa explicar numa aula
+
 		/**
          * Generate an array of page numbers (or the '...' string) which is used in an ng-repeat to generate the
          * links used in pagination

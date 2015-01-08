@@ -17,16 +17,18 @@
 	</div>
 <!--/User List-->
 
+<!-- TODO criar diretiva para a paginacao -->
+
 <!--Pagination-->
 	<nav class="text-center">
 		<p>Mostrando {{pagination.from}} a {{pagination.to}} de {{pagination.total}} usuários</p>
 		<div>
 			<ul class="pagination">
-				<li ng-class="{disabled: currentPage == 0}">
+				<li ng-class="{disabled: currentPage == 1}">
 					<a href ng-click="prevPage()">« Prev</a>
 				</li>
 				<li ng-repeat="n in range track by $index"
-				ng-class="{active: n == currentPage}"
+				ng-class="{active: n == currentPage, disabled: n == '...'}"
 				ng-click="setPage()">
 					<a href ng-bind="n"></a>
 				</li>
