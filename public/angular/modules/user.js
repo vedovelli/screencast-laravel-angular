@@ -15,9 +15,11 @@
 
 		$scope.pagination = {};
 
-		$scope.currentPage = 0;
+		$scope.currentPage = 1;
 
 		$scope.itemsPerPage = 6;
+
+		$scope.paginationRange = 16;
 
 		$scope.$watch('filter_cities', function(value) {
 
@@ -129,7 +131,7 @@
 
 				$scope.users = data.users;
 				$scope.pagination = data.pagination;
-				$scope.range = $scope.generatePagesArray($scope.currentPage, $scope.pagination.total, $scope.itemsPerPage, 20);
+				$scope.range = $scope.generatePagesArray($scope.currentPage, $scope.pagination.total, $scope.itemsPerPage, $scope.paginationRange);
 				console.log($scope.range);
 			});
 		};
