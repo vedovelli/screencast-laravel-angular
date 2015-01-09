@@ -4,6 +4,8 @@ Esta app serve de base para a série de video-aulas "Single Page Applications co
 
 ### Instalação
 
-```shell
-git clone x
+```javascript
+git clone git@github.com:vedovelli/screencast-laravel-angular.git
+cd screencast-laravel-angular
+npm install && bower install
 ```
