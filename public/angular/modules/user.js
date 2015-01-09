@@ -23,6 +23,30 @@
 
 		$scope.paginationRange = 16;
 
+		$scope.$watch('user.zip', function(value) {
+
+			$scope.user.city = '';
+			$scope.user.state = '';
+
+			if(value !== undefined)
+			{
+				if(value.length === 9)
+				{
+					var objER = /^([0-9]){5}([-])([0-9]){3}$/;
+					var valid = objER.test(value);
+
+					var address = UserService.address(value).success(function(data) {
+
+						if(!data.erro)
+						{
+							$scope.user.city = data.localidade;
+							$scope.user.state = data.uf;
+						}
+					});
+				}
+			}
+		});
+
 		$scope.$watch('filter_cities', function(value) {
 
 			if(value !== undefined) {
