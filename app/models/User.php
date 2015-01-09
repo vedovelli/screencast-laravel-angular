@@ -33,6 +33,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 			$orderBy = explode('|', $orderBy);
 			$paginator = $paginator->orderBy($orderBy[0], $orderBy[1]);
+		} else {
+
+			$paginator = $paginator->orderBy('updated_at', 'desc');
 		}
 
 		$paginator = $paginator->paginate($limit);
