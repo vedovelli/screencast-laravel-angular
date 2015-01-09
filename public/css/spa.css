@@ -6,6 +6,10 @@ body{
 	border-radius: 10px;
 }
 
+.spa-user-container{
+	min-height: 630px;
+}
+
 .spa-login-box{
 	margin-top: 150px;
 }
