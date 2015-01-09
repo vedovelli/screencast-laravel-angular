@@ -39,5 +39,8 @@ Route::group(array('prefix' => 'api'), function() {
 	Route::resource('user', 'UserController');
 
 	Route::get('cities', 'CityController@listCities');
+
+	Route::get('gravatar/{email}', 'UserController@gravatar');
+
 });
 

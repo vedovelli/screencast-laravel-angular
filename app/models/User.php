@@ -44,7 +44,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 		foreach ($users as $index => $user) {
 
-			$user['gravatar'] = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $user['email'] ) ) ) . "?s=200";
+			$user['gravatar'] = $this->get_gravatar($user['email']);
 			$users[$index] = $user;
 		}
 
@@ -61,6 +61,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		];
 
 		return $response;
+	}
+
+	function get_gravatar($email) {
+
+		return "http://www.gravatar.com/avatar/" . md5(strtolower(trim($email))) . "?s=200";
 	}
 
 	public function get_user($id)
