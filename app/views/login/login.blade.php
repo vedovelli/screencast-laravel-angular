@@ -11,21 +11,21 @@
 					<h3 class="panel-title">Por favor faça login</h3>
 				</div>
 			<div class="panel-body">
-			
+
 				@include('layouts.partials.flash_messages')
 
 				{{ Form::open(['action' => 'login_path', 'id' => 'loginForm']) }}
-					
+
 					<div class="form-group">
 						{{ Form::label('txtEmail', 'E-mail') }}
-						{{ Form::email('email', Session::get('email'), ['class' => 'form-control', 'id' => 'txtEmail']) }}
+						{{ Form::email('email', Session::get('email'), ['class' => 'form-control', 'id' => 'txtEmail', 'autofocus']) }}
 					</div>
 
 					<div class="form-group">
 						{{ Form::label('txtPassword', 'Senha') }}
 						{{ Form::password('password', ['class' => 'form-control', 'id' => 'txtPassword']) }}
 					</div>
-					
+
 					<div class="form-group">
 						{{ Form::submit('Log In', ['class' => 'btn btn-primary']) }}
 						{{ Form::checkbox('remember_me', true, true, ['id' => 'chkRememberMe']) }}
@@ -33,7 +33,7 @@
 					</div>
 
 					{{link_to_action('RemindersController@getRemind', 'Esqueceu a senha?')}}
-		 				
+
 				{{ Form::close() }}
 
 				</div>

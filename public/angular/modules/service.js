@@ -112,6 +112,11 @@
 			return $http.get(apiUrl+'?limit='+encodeURIComponent(list_state.limit)+'&page='+encodeURIComponent(list_state.page)+'&cities='+encodeURIComponent(list_state.cities)+'&orderBy='+encodeURIComponent(list_state.orderBy));
 		}
 
+		this.gravatar = function(email) {
+
+			return $http.get('http://spa.app/api/gravatar/'+email);
+		}
+
 		this.save = function(input) {
 
 			if(input.id > 0) {
