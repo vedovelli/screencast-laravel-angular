@@ -117,6 +117,11 @@
 			return $http.get('http://spa.app/api/gravatar/'+email);
 		}
 
+        this.address = function(cep) {
+
+            return $http.get('http://viacep.com.br/ws/'+cep+'/json/');
+        }
+
 		this.save = function(input) {
 
 			if(input.id > 0) {
