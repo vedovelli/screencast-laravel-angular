@@ -224,22 +224,12 @@
 			link: function(scope, element)
 			{
 
-				/**
-				* TODO: ao inves de manipular aqui, on mouse enter ou leave
-				* setar propriedade no Ctrl e usar ng-show na view. (y)
-				*/
+				scope.showControls = false;
 
-				element.on('mouseenter', '.spa-user-item', function(event)
-				{
+				scope.toggleControls = function(state) {
 
-					$(event.currentTarget).find('.spa-user-actions').show();
-				});
-
-				element.on('mouseleave', '.spa-user-item', function(event)
-				{
-
-					$(event.currentTarget).find('.spa-user-actions').hide();
-				});
+					scope.showControls = state;
+				};
 			}
 		};
 	});

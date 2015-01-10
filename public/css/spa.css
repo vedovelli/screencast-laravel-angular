@@ -26,10 +26,6 @@ body{
 	cursor: pointer;
 }
 
-.spa-user-actions{
-	display: none;
-}
-
 .spa-user-card-body{
 	height: 145px;
 }
