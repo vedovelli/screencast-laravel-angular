@@ -77,9 +77,7 @@ class UserController extends \BaseController {
 		return Response::json($response, 200);
 	}
 
-	public function gravatar(){
-
-		$email = Input::get('email');
+	public function gravatar($email){
 
 		$gravatar = $this->userModel->get_gravatar($email);
 
