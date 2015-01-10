@@ -24,6 +24,9 @@
     <link href="/bower_components/select2/select2.css" rel="stylesheet">
     <link href="/bower_components/select2-bootstrap3-css/select2-bootstrap.css" rel="stylesheet">
 
+    <!-- Animate.css -->
+    <link href="/bower_components/animate.css/animate.min.css" rel="stylesheet">
+
     <!-- Local CSS -->
     <link href="/css/spa.css" rel="stylesheet">
 
@@ -42,10 +45,10 @@
     <div id="wrapper">
 
         @include('layouts.partials.admin_top_area')
-        
+
         <div id="page-wrapper">
 
-            <div class="container-fluid">
+            <div class="spa-users container-fluid">
 
                 <!-- Page Heading -->
                 <div class="row">

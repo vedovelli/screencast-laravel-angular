@@ -5,7 +5,7 @@
 
 	'use strict';
 
-	var app = angular.module('user', ['angular.filter', 'ui.spa', 'service.spa']);
+	var app = angular.module('user', ['angular.filter', 'ui.spa', 'service.spa', 'ngAnimate']);
 
 	/**
 	* TODO remover tudo o que for desnecessario no controller
