@@ -7,6 +7,10 @@
 
 	var app = angular.module('user', ['angular.filter', 'ui.spa', 'service.spa']);
 
+	/**
+	* TODO remover tudo o que for desnecessario no controller
+	*/
+
 	app.controller('UserController', ['$scope', '$window', 'UserService', 'PaginationService', function($scope, $window, UserService, PaginationService) {
 
 		$scope.ready = false;
@@ -23,6 +27,25 @@
 
 		$scope.paginationRange = 16;
 
+		$scope.$watch('user.email', function(value)
+		{
+
+			delete $scope.user.gravatar;
+
+			var objER = /^[a-zA-Z0-9][a-zA-Z0-9\._-]+@([a-zA-Z0-9\._-]+\.)[a-zA-Z-0-9]{2}/;
+			if(value !== undefined)
+			{
+				var valid = objER.test(value);
+				if(valid)
+				{
+					UserService.gravatar(value).success(function(data) {
+
+						$scope.user.gravatar = data.gravatar;
+					});
+				}
+			}
+		});
+
 		$scope.$watch('user.zip', function(value) {
 
 			$scope.user.city = '';
@@ -35,14 +58,18 @@
 					var objER = /^([0-9]){5}([-])([0-9]){3}$/;
 					var valid = objER.test(value);
 
-					var address = UserService.address(value).success(function(data) {
+					if(valid)
+					{
+						UserService.address(value).success(function(data) {
 
-						if(!data.erro)
-						{
-							$scope.user.city = data.localidade;
-							$scope.user.state = data.uf;
-						}
-					});
+							if(!data.erro)
+							{
+								$scope.user.city = data.localidade;
+								$scope.user.state = data.uf;
+							}
+						});
+					}
+
 				}
 			}
 		});
@@ -65,43 +92,51 @@
 			}
 		});
 
-		$scope.prevPage = function () {
-	        if ($scope.currentPage > 0) {
+		$scope.prevPage = function ()
+		{
+	        if ($scope.currentPage > 0)
+	        {
 	            $scope.currentPage--;
 	            $scope.fetchUsers();
 	        }
 	    };
 
-	    $scope.nextPage = function () {
-	        if ($scope.currentPage < $scope.pagination.last_page) {
+	    $scope.nextPage = function ()
+	    {
+	        if ($scope.currentPage < $scope.pagination.last_page)
+	        {
 	            $scope.currentPage++;
 	            $scope.fetchUsers();
 	        }
 	    };
 
-	    $scope.setPage = function () {
+	    $scope.setPage = function ()
+	    {
 	        $scope.currentPage = this.n;
 	        $scope.fetchUsers();
 	    };
 
-		$scope.clear = function() {
-
+		$scope.clear = function()
+		{
 			$scope.filter_cities = undefined;
 			$scope.filter_orderBy = undefined;
 			$scope.fetchUsers();
 		};
 
-		$scope.new = function() {
+		$scope.new = function()
+		{
 
 			$scope.user = {};
 		};
 
-		$scope.edit = function(user) {
+		$scope.edit = function(user)
+		{
 
 			$scope.user = user;
 		};
 
-		$scope.save = function(){
+		$scope.save = function()
+		{
 
 			UserService.save($scope.user).success(function(data) {
 
@@ -118,15 +153,20 @@
 			});
 		};
 
-		$scope.remove = function(user) {
+		$scope.remove = function(user)
+		{
 
-			$window.bootbox.confirm('Remover '+ user.fullname +'?', function(action) {
+			$window.bootbox.confirm('Remover '+ user.fullname +'?', function(action)
+			{
 
-				if(action) {
+				if(action)
+				{
 
-					UserService.remove(user).success(function(data) {
+					UserService.remove(user).success(function(data)
+					{
 
-						if(data.success){
+						if(data.success)
+						{
 
 							$scope.fetchUsers();
 						}
@@ -135,27 +175,32 @@
 			});
 		};
 
-		$scope.fetchUsers = function() {
+		$scope.fetchUsers = function()
+		{
 
-			if($scope.filter_cities == '') {
+			if($scope.filter_cities == '')
+			{
 
 				$scope.filter_cities = undefined;
 			}
 
-			if($scope.filter_orderBy == '') {
+			if($scope.filter_orderBy == '')
+			{
 
 				$scope.filter_orderBy = undefined;
 			}
 
 			$scope.ready = false;
 
-			UserService.fetch({
+			UserService.fetch(
+			{
 
 				cities: $scope.filter_cities,
 				orderBy: $scope.filter_orderBy,
 				limit: $scope.itemsPerPage,
 				page: $scope.currentPage
-			}).success(function(data) {
+			}).success(function(data)
+			{
 
 				$scope.users = data.users;
 				$scope.pagination = data.pagination;
@@ -167,7 +212,8 @@
 		$scope.fetchUsers();
 	}]);
 
-	app.directive('userCard', function() {
+	app.directive('userCard', function()
+	{
 
 		return {
 
@@ -175,19 +221,22 @@
 
 			templateUrl: '/angular/partials/users.card.html',
 
-			link: function(scope, element) {
+			link: function(scope, element)
+			{
 
 				/**
 				* TODO: ao inves de manipular aqui, on mouse enter ou leave
 				* setar propriedade no Ctrl e usar ng-show na view. (y)
 				*/
 
-				element.on('mouseenter', '.spa-user-item', function(event) {
+				element.on('mouseenter', '.spa-user-item', function(event)
+				{
 
 					$(event.currentTarget).find('.spa-user-actions').show();
 				});
 
-				element.on('mouseleave', '.spa-user-item', function(event) {
+				element.on('mouseleave', '.spa-user-item', function(event)
+				{
 
 					$(event.currentTarget).find('.spa-user-actions').hide();
 				});
@@ -195,7 +244,8 @@
 		};
 	});
 
-	app.directive('userFilter', function() {
+	app.directive('userFilter', function()
+	{
 
 		return {
 
