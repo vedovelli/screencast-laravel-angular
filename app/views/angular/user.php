@@ -1,5 +1,7 @@
 <div ng-app="user" ng-controller="UserController" class="spa-user-container" ng-show="users.length > 0">
 
+	<div class="spa-overlay" ng-show="!userReady"></div>
+
 	<user-form></user-form>
 
 	<user-filter></user-filter>
@@ -15,7 +17,7 @@
 	</div>
 
 	<nav class="text-center">
-		<pagination template="/angular/partials/app.pagination.html"></pagination>
+		<pagination	template="/angular/partials/app.pagination.html"></pagination>
 	</nav>
 
 </div>
