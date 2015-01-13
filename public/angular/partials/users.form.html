@@ -7,7 +7,7 @@
       </div>
       <div class="modal-body">
 
-		<form name="userForm" method="post" class="spa-user-form" ng-submit="save()" novalidate>
+		<form name="userForm" id="userForm" method="post" class="spa-user-form" ng-submit="save(userForm)" novalidate>
 
 			<img ng-src="{{user.gravatar}}" alt="{{user.fullname}}" width="200" class="spa-user-form-image" ng-if="user.gravatar">
 			<img src="/img/placeholder.png" width="200" class="spa-user-form-image" ng-if="!user.gravatar">
@@ -16,39 +16,41 @@
 
 			<div class="row">
 				<div class="col-md-5">
-					<div class="form-group" ng-class="{ 'has-error': userForm.fullname.$invalid && !userForm.fullname.$pristine }">
+					<div class="form-group" ng-class="{ 'has-error': userForm.fullname.$invalid && submitted }">
 						<label for="txtFullname">Nome Completo</label>
 						<input type="text" autocomplete="off" class="form-control" name="fullname" id="txtFullname" required ng-model="user.fullname" autofocus>
-						<p class="text-danger" ng-show="userForm.fullname.$invalid && !userForm.fullname.$pristine"><small>Nome completo é obrigatório</small></p>
+						<p class="text-danger" ng-show="userForm.fullname.$invalid && submitted"><small>Nome completo é obrigatório</small></p>
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="form-group" ng-class="{ 'has-error': userForm.email.$invalid && !userForm.email.$pristine }">
+					<div class="form-group" ng-class="{ 'has-error': userForm.email.$invalid && submitted }">
 						<label for="txtEmail">E-mail</label>
-						<input type="email" autocomplete="off" class="form-control" name="email" id="txtEmail" required ng-model="user.email">
-						<p class="text-danger" ng-show="userForm.email.$invalid && !userForm.email.$pristine"><small>E-mail é obrigatório e precisa ser válido</small></p>
+						<input type="email" autocomplete="off" class="form-control" name="email" id="txtEmail" ng-model="user.email" required>
+						<p class="text-danger" ng-show="userForm.email.$invalid && submitted"><small>E-mail é obrigatório e precisa ter um formato válido</small></p>
 					</div>
 				</div>
 				<div class="col-md-offset-3"></div>
 			</div>
 			<div class="row">
 				<div class="col-md-3">
-					<div class="form-group">
+					<div class="form-group" ng-class="{ 'has-error': userForm.username.$invalid && submitted }">
 						<label for="txtUsername">Usuário</label>
-						<input type="text" autocomplete="off" class="form-control" name="username" id="txtUsername" required ng-model="user.username">
-						<p class="text-danger" ng-show="userForm.username.$invalid && !userForm.username.$pristine"><small>Usuário é obrigatório</small></p>
+						<input type="text" autocomplete="off" class="form-control" name="username" id="txtUsername" ng-model="user.username" required>
+						<p class="text-danger" ng-show="userForm.username.$invalid && submitted"><small>Usuário é obrigatório</small></p>
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="form-group">
+					<div class="form-group" ng-class="{ 'has-error': userForm.password.$invalid && submitted }">
 						<label for="txtPassword">Senha</label>
-						<input type="password" class="form-control" name="password" id="txtPassword">
+						<input type="password" class="form-control" name="password" id="txtPassword" ng-model="user.password" ng-required="user.id == undefined">
+						<p class="text-danger" ng-show="userForm.password.$invalid && submitted"><small>Senha é obrigatória</small></p>
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="form-group">
+					<div class="form-group" ng-class="{ 'has-error': userForm.password_confirmation.$invalid && submitted }">
 						<label for="txtPasswordConfirmation">Confirmação de Senha</label>
-						<input type="password" class="form-control" name="password_confirmation" id="txtPasswordConfirmation">
+						<input type="password" class="form-control" name="password_confirmation" id="txtPasswordConfirmation" ng-model="user.password_confirmation" ng-required="user.id == undefined">
+						<p class="text-danger" ng-show="userForm.password_confirmation.$invalid && submitted"><small>Confirmação de Senha é obrigatória</small></p>
 					</div>
 				</div>
 				<div class="col-md-offset-3"></div>
@@ -56,36 +58,35 @@
 
 			<div class="row">
 				<div class="col-md-2">
-					<div class="form-group">
+					<div class="form-group" ng-class="{ 'has-error': userForm.zip.$invalid && submitted }">
 						<label for="txtCep">CEP</label>
-						<input type="text" autocomplete="off" class="form-control" name="cep" id="txtCep" required ng-model="user.zip">
-						<p class="text-danger" ng-show="userForm.cep.$invalid && !userForm.cep.$pristine"><small>CEP é obrigatório</small></p>
+						<input type="text" autocomplete="off" class="form-control" name="zip" id="txtCep" ng-model="user.zip" required>
+						<p class="text-danger" ng-show="userForm.zip.$invalid && submitted"><small>CEP é obrigatório</small></p>
 					</div>
 				</div>
 				<div class="col-md-5">
-					<div class="form-group">
+					<div class="form-group" ng-class="{ 'has-error': userForm.city.$invalid && submitted }">
 						<label for="txtCidade">Cidade</label>
-						<input type="text" autocomplete="off" class="form-control" name="cidade" id="txtCidade" required ng-model="user.city">
-						<p class="text-danger" ng-show="userForm.city.$invalid && !userForm.city.$pristine"><small>Cidade é obrigatório</small></p>
+						<input type="text" autocomplete="off" class="form-control" name="city" id="txtCidade" ng-model="user.city" required>
+						<p class="text-danger" ng-show="userForm.city.$invalid && submitted"><small>Cidade é obrigatória</small></p>
 					</div>
 				</div>
 				<div class="col-md-2">
-					<div class="form-group">
+					<div class="form-group" ng-class="{ 'has-error': userForm.state.$invalid && submitted }">
 						<label for="txtEstado">UF</label>
-						<input type="text" autocomplete="off" class="form-control" name="estado" id="txtEstado" required ng-model="user.state">
-						<p class="text-danger" ng-show="userForm.state.$invalid && !userForm.state.$pristine"><small>Estado é obrigatório</small></p>
+						<input type="text" autocomplete="off" class="form-control" name="state" id="txtEstado" ng-model="user.state" required>
+						<p class="text-danger" ng-show="userForm.state.$invalid && submitted"><small>Estado é obrigatório</small></p>
 					</div>
 				</div>
 				<div class="col-md-offset-3"></div>
 			</div>
-			<button type="submit" class="btn btn-primary hide" ng-disabled="userForm.$invalid">Salvar</button>
+			<button type="submit" class="btn btn-primary spa-submit-btn">Salvar</button>
 		</form>
 
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary" ng-click="salvar()" ng-disabled="userForm.$invalid">Salvar</button>
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

@@ -19,6 +19,8 @@
 		 'PaginationService',
 		 function($scope, $window, UserService, PaginationService) {
 
+		$scope.submitted = false;
+
 	 	// O overlay pode ser escondido
 	 	$scope.userReady = false;
 
@@ -172,27 +174,39 @@
 
 		$scope.edit = function(user)
 		{
-
 			$scope.user = user;
 		};
 
-		$scope.save = function()
+		$scope.save = function(form)
 		{
 
-			$scope.userReady = false;
-			UserService.save($scope.user).success(function(data) {
+			if(form.$valid)
+			{
 
-				if(data.success){
+				$scope.userReady = false;
 
-					var form = angular.element(userForm);
-						form.find('input:password').val('');
-						form.modal('hide');
+				UserService.save($scope.user).success(function(data) {
 
-					$scope.user = {};
-					$scope.fetchUsers();
+					if(data.success){
 
-				}
-			});
+
+						var form = angular.element(userForm);
+								form.find('input:password').val('');
+								form.modal('hide');
+
+						$scope.user = {};
+						$scope.fetchUsers();
+
+					}
+				});
+
+				$scope.submitted = false;
+			} else {
+
+				$scope.submitted = true;
+			}
+
+
 		};
 
 		$scope.remove = function(user)
