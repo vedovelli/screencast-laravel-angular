@@ -15,9 +15,12 @@
 
 		['$scope',
 		 '$window',
+		 '$sce',
 		 'UserService',
 		 'PaginationService',
-		 function($scope, $window, UserService, PaginationService) {
+		 function($scope, $window, $sce, UserService, PaginationService) {
+
+		$scope.serverSideValidationErrors = undefined;
 
 		$scope.submitted = false;
 
@@ -183,22 +186,37 @@
 			if(form.$valid)
 			{
 
-				$scope.userReady = false;
 
-				UserService.save($scope.user).success(function(data) {
+				UserService.save($scope.user)
+					.success(function(data) {
 
-					if(data.success){
+						if(data.success){
 
+							$scope.userReady = false;
 
-						var form = angular.element(userForm);
-								form.find('input:password').val('');
-								form.modal('hide');
+							var form = angular.element(userForm);
+									form.find('input:password').val('');
+									form.modal('hide');
 
-						$scope.user = {};
-						$scope.fetchUsers();
+							$scope.user = {};
+							$scope.fetchUsers();
 
-					}
-				});
+						}
+					})
+					.error(function(data) {
+
+						if(data.errors)
+						{
+							$scope.serverSideValidationErrors = 'Mensagem do servidor:<br><br>';
+
+							for(var prop in data.errors)
+							{
+								$scope.serverSideValidationErrors += '&bull; ' + data.errors[prop] + '<br>';
+							}
+
+							$scope.serverSideValidationErrors = $sce.trustAsHtml($scope.serverSideValidationErrors);
+						}
+					});
 
 				$scope.submitted = false;
 			} else {

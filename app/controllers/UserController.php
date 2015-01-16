@@ -1,13 +1,20 @@
 <?php
-// TODO adicionar validacao
+// TODO modificar prepare response para acomodar diversas situacoes
 class UserController extends \BaseController {
 
+
+
 	private $userModel;
+
+
 
 	function __construct(User $user)
 	{
 		$this->userModel = $user;
 	}
+
+
+
 
 	public function index()
 	{
@@ -41,14 +48,55 @@ class UserController extends \BaseController {
 		return Response::json($user_list, 200);
 	}
 
+
+
+
 	public function store()
 	{
-		$user = $this->userModel->save_user(Input::all());
 
-		$response = $this->prepare_response(['user' => $user, 'description' => 'Recently saved user']);
+		$validation = Validator::make(
 
-		return Response::json($response, 200);
+			[ 'fullname' 	=> Input::get('fullname'),
+        'email' 		=> Input::get('email'),
+        'username' 	=> Input::get('username'),
+        'password' 	=> Input::get('password'),
+        'zip' 			=> Input::get('zip'),
+        'city' 			=> Input::get('city'),
+        'state' 		=> Input::get('state')],
+
+			[	'fullname' 	=> 'required',
+        'email' 		=> 'required|email|unique:users',
+        'username' 	=> 'required|unique:users',
+        'password' 	=> 'required|min:6',
+        'zip' 			=> 'required',
+        'city' 			=> 'required',
+        'state' 		=> 'required']);
+
+		if($validation->fails())
+		{
+			$response = [];
+
+			$response['success'] = false;
+
+			$response['description'] = 'Erros de validação';
+
+			$response['errors'] = $validation->messages();
+
+			return Response::json($response , 400);
+
+		} else {
+
+			$user = $this->userModel->save_user(Input::all());
+
+			$response = $this->prepare_response(['user' => $user, 'description' => 'Recently saved user']);
+
+			return Response::json($response, 200);
+
+		}
 	}
+
+
+
 
 	public function show($id)
 	{
@@ -59,6 +107,9 @@ class UserController extends \BaseController {
 		return Response::json($response, 200);
 	}
 
+
+
+
 	public function update($id)
 	{
 		$user = $this->userModel->update_user($id, Input::all());
@@ -68,6 +119,9 @@ class UserController extends \BaseController {
 		return Response::json($response, 200);
 	}
 
+
+
+
 	public function destroy($id)
 	{
 		$user = $this->userModel->delete_user($id);
@@ -76,6 +130,9 @@ class UserController extends \BaseController {
 
 		return Response::json($response, 200);
 	}
+
+
+
 
 	public function gravatar($email){
 
@@ -91,6 +148,9 @@ class UserController extends \BaseController {
 
 		return $response;
 	}
+
+
+
 
 	private function prepare_response($params)
 	{
