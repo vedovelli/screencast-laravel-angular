@@ -19,7 +19,7 @@
 			<img ng-src="{{user.gravatar}}" alt="{{user.fullname}}" width="200" class="spa-user-form-image" ng-if="user.gravatar">
 			<img src="/img/placeholder.png" width="200" class="spa-user-form-image" ng-if="!user.gravatar">
 
-			<h4>Todos os campos são de preenchimento obrigatório</h4>
+			<!-- <h4>Todos os campos são de preenchimento obrigatório</h4> -->
 
 			<div class="row">
 				<div class="col-md-5">
@@ -34,6 +34,7 @@
 						<label for="txtEmail">E-mail</label>
 						<input type="email" autocomplete="off" class="form-control" name="email" id="txtEmail" ng-model="user.email" required>
 						<p class="text-danger" ng-show="userForm.email.$invalid && submitted"><small>E-mail é obrigatório e precisa ter um formato válido</small></p>
+						<span class="help-block"><small>É preciso ser único no sistema</small></span>
 					</div>
 				</div>
 				<div class="col-md-offset-3"></div>
@@ -44,6 +45,7 @@
 						<label for="txtUsername">Usuário</label>
 						<input type="text" autocomplete="off" class="form-control" name="username" id="txtUsername" ng-model="user.username" required>
 						<p class="text-danger" ng-show="userForm.username.$invalid && submitted"><small>Usuário é obrigatório</small></p>
+						<span class="help-block"><small>É preciso ser único no sistema</small></span>
 					</div>
 				</div>
 				<div class="col-md-3">
